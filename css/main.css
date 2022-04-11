@@ -28,6 +28,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  font-family: sans-serif;
 }
 
 ol, ul {
@@ -67,28 +68,84 @@ table {
           justify-content: center;
 }
 
-.align-items-center {
+.align-items-center, .home__head {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .home {
-  width: 100%;
+  background-color: #101010;
+  height: 100vh;
 }
 
 .home__container {
-  border: 1px solid red;
   padding-top: 50px;
   width: 1450px;
   margin: 0 auto;
 }
 
 .home__head {
-  border: 1px solid blue;
-  padding: 10px 0;
+  height: 40px;
+  overflow: hidden;
+}
+
+.home__reset {
+  color: #bbbbbb;
+  font-weight: 700;
+}
+
+.home__reset--white {
+  color: white;
+}
+
+.home__menu {
+  width: 35%;
 }
 
 .home__item {
-  margin-left: 50px;
+  position: relative;
+  height: 100%;
+}
+
+.home__item--link {
+  color: #bbbbbb;
+  font-size: 15px;
+  font-weight: 700;
+  display: block;
+  position: relative;
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+}
+
+.home__item--link:hover {
+  color: white;
+}
+
+.home__item--icon {
+  color: #bbbbbb;
+}
+
+.home__item--active {
+  color: white !important;
+}
+
+.home__item--hover {
+  position: absolute;
+  right: 0px;
+  opacity: .2;
+  bottom: -35px;
+  color: #bbbbbb;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.home__item:hover .home__item--link {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+  opacity: .2;
+}
+
+.home__item:hover .home__item--hover {
+  opacity: 1 !important;
 }
