@@ -50,7 +50,7 @@ table {
   border-spacing: 0;
 }
 
-.flex, .home__head, .home__menu, .home__sosial {
+.flex, .home__head, .home__menu, .home__sosial, .home__footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +68,7 @@ table {
           justify-content: center;
 }
 
-.align-items-center, .home__head, .home__sosial {
+.align-items-center, .home__head, .home__sosial, .home__footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -90,7 +90,7 @@ table {
 
 .home__container {
   position: relative;
-  padding-top: 50px;
+  height: inherit;
   width: 1450px;
   margin: 0 auto;
 }
@@ -98,6 +98,7 @@ table {
 .home__head {
   height: 40px;
   overflow: hidden;
+  padding-top: 50px;
 }
 
 .home__reset {
@@ -187,7 +188,6 @@ table {
 .home__sosial {
   position: absolute;
   right: -120px;
-  bottom: 0;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -225,4 +225,51 @@ table {
 
 .home__sosial--link:hover {
   color: white;
+}
+
+.home__footer {
+  border: 1px solid white;
+  margin-top: 85px;
+}
+
+.home__contact {
+  margin-right: 75px;
+}
+
+.home__contact--email {
+  color: white;
+}
+
+.home__contact--number {
+  display: block;
+  color: white;
+  margin-top: 15px;
+}
+
+.home__about {
+  color: white;
+}
+
+.home__about--first {
+  display: block;
+  position: relative;
+  font-size: 75px;
+}
+
+.home__about--second {
+  position: relative;
+  display: none;
+  font-size: 75px;
+}
+
+.home__about--third {
+  display: none;
+}
+
+.home__about--animation {
+  background-color: black;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
 }

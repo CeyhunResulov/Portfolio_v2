@@ -4,13 +4,14 @@
     height: 100vh;
     &__container{
         position: relative;
-        padding-top: $space-10x;
+        height: inherit;
         width: $container-width;
         margin: 0 auto;
     }
     &__head{
         height: 40px;
         overflow: hidden;
+        padding-top: $space-10x;
         @extend .flex;
         @extend .justify-content-between;
         @extend .align-items-center;
@@ -89,10 +90,10 @@
         }
 
     }
+    // home sosial
     &__sosial{
         position: absolute;
         right: -$space-3x*8;
-        bottom: 0;
         transform: rotate(90deg);
         @extend .flex;
         @extend .align-items-center;
@@ -121,6 +122,47 @@
         &--link:hover{
             color: white;
         }
+    }
+    // home footer
+    &__footer{
+        border: 1px solid white;
+        margin-top: $space-17x;
+        @extend .flex;
+        @extend .align-items-center;
+    }
+    &__contact{
+        margin-right: $space-15x;
+        &--email{
+            color: white;
+        }
+        &--number{
+            display: block;
+            color: white;
+            margin-top: $space-3x;
+        }
+    }
+    &__about{
+        color: white;
+    }
+    &__about--first{
+        display: block;
+        position: relative;
+        font-size: $size-15x;
+    }
+    &__about--second{
+        position: relative;
+        display: none;
+        font-size: $size-15x;
+    }
+    &__about--third{
+        display: none;
+    }
+    &__about--animation{
+        background-color: black;
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        right: 0;
     }
 }
 
