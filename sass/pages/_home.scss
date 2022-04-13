@@ -1,7 +1,9 @@
 .home{
     background-color: $secondary-color;
+    object-fit: cover;
     height: 100vh;
     &__container{
+        position: relative;
         padding-top: $space-10x;
         width: $container-width;
         margin: 0 auto;
@@ -63,7 +65,63 @@
         .home__item--hover{
             opacity: 1 !important;
         }
+    
+    }
+    // home desc
+    &__info{
+        position: relative;
+        margin-top: 25%;
+        width: 100%;
+        height: $size-12x;
+        box-sizing: border-box;
+        &--desc{
+            color: white;
+            position: absolute;
+            left: 50%;
+            right: 12em;
+            font-size: $size-4x;
+            font-weight: $weight-1;
+            line-height: $size-6x;
+        }
+        &--name{
+            font-weight: $weight-6;
+            color: green;
+        }
 
     }
+    &__sosial{
+        position: absolute;
+        right: -$space-3x*8;
+        bottom: 0;
+        transform: rotate(90deg);
+        @extend .flex;
+        @extend .align-items-center;
+        &--follow{
+            color: $thirdary-color;
+            font-size: $size-3x;
+        }
+        &--line{
+            background-color: $thirdary-color;
+            width: $size-10x;
+            height: 1px;
+            margin: 0 $space-4x;
+        }
+        &--icons{
+            display: flex;
+        }
+        &--icon{
+            margin-right: $space-4x; 
+            transform: rotate(-90deg);
+        }
+        &--link{
+            color: $thirdary-color;
+            font-size: $size-4x;
+            transition: all ease .3s;
+        }
+        &--link:hover{
+            color: white;
+        }
+    }
 }
+
 
