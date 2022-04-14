@@ -127,6 +127,7 @@
     &__footer{
         border: 1px solid white;
         margin-top: $space-17x;
+        height: $size-16x;
         @extend .flex;
         @extend .align-items-center;
     }
@@ -146,23 +147,7 @@
     }
     &__about--first{
         display: block;
-        position: relative;
         font-size: $size-15x;
-    }
-    &__about--second{
-        position: relative;
-        display: none;
-        font-size: $size-15x;
-    }
-    &__about--third{
-        display: none;
-    }
-    &__about--animation{
-        background-color: black;
-        position: absolute;
-        height: 100%;
-        width: 50%;
-        right: 0;
     }
 }
 

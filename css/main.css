@@ -230,6 +230,7 @@ table {
 .home__footer {
   border: 1px solid white;
   margin-top: 85px;
+  height: 80px;
 }
 
 .home__contact {
@@ -252,24 +253,5 @@ table {
 
 .home__about--first {
   display: block;
-  position: relative;
   font-size: 75px;
-}
-
-.home__about--second {
-  position: relative;
-  display: none;
-  font-size: 75px;
-}
-
-.home__about--third {
-  display: none;
-}
-
-.home__about--animation {
-  background-color: black;
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  right: 0;
 }
