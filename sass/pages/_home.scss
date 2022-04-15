@@ -6,12 +6,12 @@
         position: relative;
         height: inherit;
         width: $container-width;
+        padding-top: $space-10x;
+        box-sizing: border-box;
         margin: 0 auto;
     }
     &__head{
-        height: 40px;
-        overflow: hidden;
-        padding-top: $space-10x;
+        height: $size-8x;
         @extend .flex;
         @extend .justify-content-between;
         @extend .align-items-center;
@@ -23,14 +23,21 @@
             color:white;
         }
     }
+    // home menu 
     &__menu{
+        height: inherit;
         width: 35%;
         @extend .flex;
         @extend .justify-content-between;
     }
     &__item{
+        // overflow: hidden;
         position: relative;
-        height: 100%;
+        height: inherit;
+        @extend .flex;
+        @extend .align-items-center;
+        // @extend .justify-content-between;
+        
         &--link{
             color: $main-color;
             font-size: $size-3x;
@@ -51,22 +58,103 @@
         &--hover{
             position: absolute;
             right: 0px;
-            opacity: .2;
-            bottom: -$space-7x;
+            opacity: 0;
+            visibility: hidden;
+            bottom: -$space-7x*1.5;
             color: $main-color;
             font-size: $size-3x;
-            font-weight: $weight-6; 
+            font-weight: $weight-6;
+            height: inherit; 
+            width: inherit;
+            display: block;
+            
         }
     }
     &__item:hover{
+        overflow: visible;
+        .home__dropdown{
+            visibility: visible;
+            opacity: 1;
+
+        }
         .home__item--link{
-            transform: translateY(-$space-7x);
-            opacity: .2;
+            transform: translateY(-$space-8x);
+            opacity: 0;
+            visibility: visible;
         }
         .home__item--hover{
             opacity: 1 !important;
         }
     
+    }
+    &__dropdown{
+        position: absolute;
+        top: $size-8x;
+        width: $size-18x*2;
+        transition: all ease .4s;
+        opacity: 0;
+        visibility: hidden;
+        &--sign{
+            height: $size-2x;
+            width: $size-2x;
+            background-color: $fourth-color;
+            transform: rotate(45deg);
+            margin: 0 0 -5px 10px;
+        }
+        &--item{
+            height: $size-10x;
+            width: $size-18x*2;
+            box-sizing: border-box;
+            background-color: $fourth-color;
+            border-top: 1px solid $thirdary-color;
+            position: relative;
+            @extend .flex;
+            @extend .justify-content-between;
+            @extend .align-items-center;
+            
+        }
+        &--link{
+            overflow: hidden;
+            height: $size-5x;
+            width: $size-17x;
+            color: $main-color;
+            font-size: $size-3x - 3;
+            position: relative;
+            margin-left: $space-5x;
+            @extend .flex;
+            @extend .align-items-center;
+            @extend .justify-content-between;
+        }
+        &--link:hover{
+            .home__dropdown--up{
+                transform: translateY(-150%);
+                color: white;
+                visibility: hidden;
+                opacity: 0;
+
+            }
+            .home__dropdown--down{
+                transform: translateY(0%);
+                color: white;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &--up{
+            position: absolute;
+            transition: all ease .4s;
+            visibility: visible;
+            opacity: 1;
+
+        }
+        &--down{
+            position: absolute;
+            transform: translateY(150%);
+            transition: all ease .4s;
+            visibility: hidden;
+            opacity: 0;
+        }
+
     }
     // home desc
     &__info{
@@ -125,7 +213,6 @@
     }
     // home footer
     &__footer{
-        border: 1px solid white;
         margin-top: $space-17x;
         height: $size-16x;
         @extend .flex;

@@ -50,13 +50,13 @@ table {
   border-spacing: 0;
 }
 
-.flex, .home__head, .home__menu, .home__sosial, .home__footer {
+.flex, .home__head, .home__menu, .home__item, .home__dropdown--item, .home__dropdown--link, .home__sosial, .home__footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.justify-content-between, .home__head, .home__menu {
+.justify-content-between, .home__head, .home__menu, .home__dropdown--item, .home__dropdown--link {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -68,7 +68,7 @@ table {
           justify-content: center;
 }
 
-.align-items-center, .home__head, .home__sosial, .home__footer {
+.align-items-center, .home__head, .home__item, .home__dropdown--item, .home__dropdown--link, .home__sosial, .home__footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -79,6 +79,15 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.justify-content-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.border-none {
+  border: none !important;
 }
 
 .home {
@@ -92,13 +101,14 @@ table {
   position: relative;
   height: inherit;
   width: 1450px;
+  padding-top: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0 auto;
 }
 
 .home__head {
   height: 40px;
-  overflow: hidden;
-  padding-top: 50px;
 }
 
 .home__reset {
@@ -111,12 +121,13 @@ table {
 }
 
 .home__menu {
+  height: inherit;
   width: 35%;
 }
 
 .home__item {
   position: relative;
-  height: 100%;
+  height: inherit;
 }
 
 .home__item--link {
@@ -144,21 +155,108 @@ table {
 .home__item--hover {
   position: absolute;
   right: 0px;
-  opacity: .2;
-  bottom: -35px;
+  opacity: 0;
+  visibility: hidden;
+  bottom: -52.5px;
   color: #bbbbbb;
   font-size: 15px;
   font-weight: 600;
+  height: inherit;
+  width: inherit;
+  display: block;
+}
+
+.home__item:hover {
+  overflow: visible;
+}
+
+.home__item:hover .home__dropdown {
+  visibility: visible;
+  opacity: 1;
 }
 
 .home__item:hover .home__item--link {
-  -webkit-transform: translateY(-35px);
-          transform: translateY(-35px);
-  opacity: .2;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  opacity: 0;
+  visibility: visible;
 }
 
 .home__item:hover .home__item--hover {
   opacity: 1 !important;
+}
+
+.home__dropdown {
+  position: absolute;
+  top: 40px;
+  width: 180px;
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.home__dropdown--sign {
+  height: 10px;
+  width: 10px;
+  background-color: #1E1E1E;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: 0 0 -5px 10px;
+}
+
+.home__dropdown--item {
+  height: 50px;
+  width: 180px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #1E1E1E;
+  border-top: 1px solid #bbb;
+  position: relative;
+}
+
+.home__dropdown--link {
+  overflow: hidden;
+  height: 25px;
+  width: 85px;
+  color: #bbbbbb;
+  font-size: 12px;
+  position: relative;
+  margin-left: 25px;
+}
+
+.home__dropdown--link:hover .home__dropdown--up {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.home__dropdown--link:hover .home__dropdown--down {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  color: white;
+  visibility: visible;
+  opacity: 1;
+}
+
+.home__dropdown--up {
+  position: absolute;
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.home__dropdown--down {
+  position: absolute;
+  -webkit-transform: translateY(150%);
+          transform: translateY(150%);
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .home__info {
@@ -228,7 +326,6 @@ table {
 }
 
 .home__footer {
-  border: 1px solid white;
   margin-top: 85px;
   height: 80px;
 }

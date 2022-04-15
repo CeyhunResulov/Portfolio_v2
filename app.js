@@ -44,9 +44,7 @@ function firstText(textFirst){
     }
 }
 
-// setInterval(firstText,100,["I Love"," Wordpress","I Develop Front-End","I Code Cool Websit"])
-
-setInterval(firstText,100,["I Love Wordpress","I Develop Front-End","I Code Cool Websit"])
+setInterval(firstText,100,["I Love Wordpress  ","I Develop Front-End  ","I Code Cool Website  "])
 
 
 
