@@ -98,9 +98,11 @@ table {
 }
 
 .home__container {
+  border: 1px solid white;
   position: relative;
   height: inherit;
-  width: 1450px;
+  width: 95%;
+  height: inherit;
   padding-top: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -108,6 +110,7 @@ table {
 }
 
 .home__head {
+  border: 1px solid white;
   height: 40px;
 }
 
@@ -126,6 +129,7 @@ table {
 }
 
 .home__item {
+  overflow: hidden;
   position: relative;
   height: inherit;
 }
@@ -133,7 +137,7 @@ table {
 .home__item--link {
   color: #bbbbbb;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 800;
   display: block;
   position: relative;
   -webkit-transition: all ease .4s;
@@ -160,7 +164,7 @@ table {
   bottom: -52.5px;
   color: #bbbbbb;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 800;
   height: inherit;
   width: inherit;
   display: block;
@@ -171,6 +175,11 @@ table {
 }
 
 .home__item:hover .home__dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.home__item:hover .home__dropdown--contacts {
   visibility: visible;
   opacity: 1;
 }
@@ -211,16 +220,17 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #1E1E1E;
-  border-top: 1px solid #bbb;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
   position: relative;
 }
 
 .home__dropdown--link {
   overflow: hidden;
   height: 25px;
-  width: 85px;
+  width: 100px;
   color: #bbbbbb;
   font-size: 12px;
+  font-weight: 700;
   position: relative;
   margin-left: 25px;
 }
@@ -259,7 +269,25 @@ table {
   opacity: 0;
 }
 
+.home__dropdown--contacts {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 180px;
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.home__sign--contacts {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+}
+
 .home__info {
+  border: 1px solid white;
   position: relative;
   margin-top: 25%;
   width: 100%;
@@ -284,6 +312,7 @@ table {
 }
 
 .home__sosial {
+  border: 1px solid white;
   position: absolute;
   right: -120px;
   -webkit-transform: rotate(90deg);
@@ -326,6 +355,7 @@ table {
 }
 
 .home__footer {
+  border: 1px solid white;
   margin-top: 85px;
   height: 80px;
 }
@@ -351,4 +381,38 @@ table {
 .home__about--first {
   display: block;
   font-size: 75px;
+}
+
+@media (max-width: 1198px) {
+  .home__menu {
+    display: none;
+  }
+  .home__sosial--follow {
+    opacity: 0;
+  }
+  .home__sosial--line {
+    opacity: 0;
+  }
+  .home__about {
+    font-size: 55px;
+  }
+  .home__contact {
+    display: none;
+  }
+  .home__info--desc {
+    position: static;
+    width: 350px;
+    margin-left: 50%;
+  }
+}
+
+@media (max-width: 720px) {
+  .home__about {
+    font-size: 25px;
+    padding-top: 200px;
+  }
+  .home__info--desc {
+    margin: 0;
+    width: 100%;
+  }
 }
