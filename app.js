@@ -49,10 +49,27 @@ setInterval(firstText,100,["I Love Wordpress  ","I Develop Front-End  ","I Code 
 
 // get navbar
 
-function getNavbar(){
-    document.querySelector(".home__navpage").style.visibility="visible"
-    document.querySelector(".home__navpage").style.opacity="1"
+function openNavbar(){
+    document.querySelector(".home__navpage").style.visibility="visible";
+    document.querySelector(".home__navpage").style.opacity="1";
+    document.querySelector(".home").style.height="850px";
+    document.querySelector(".home__bar").style.visibility="hidden";
+    document.querySelector(".home__bar--close").style.display="block";
+    document.querySelector(".home__navpage").style.top="120px";
+
+
 }
-getNavbar()
+
+function closeNavbar(){
+    document.querySelector(".home__navpage").style.visibility="hidden";
+    document.querySelector(".home__navpage").style.opacity="0";
+    document.querySelector(".home__navpage").style.top="0";
+    document.querySelector(".home").style.height="100vh";
+    document.querySelector(".home__bar--close").style.display="none";
+    document.querySelector(".home__bar").style.visibility="visible";
+
+   
+}
+
 
 
