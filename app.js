@@ -47,6 +47,12 @@ function firstText(textFirst){
 setInterval(firstText,100,["I Love Wordpress  ","I Develop Front-End  ","I Code Cool Website  "])
 
 
+// get navbar
 
+function getNavbar(){
+    document.querySelector(".home__navpage").style.visibility="visible"
+    document.querySelector(".home__navpage").style.opacity="1"
+}
+getNavbar()
 
 

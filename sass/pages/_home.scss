@@ -3,17 +3,15 @@
     object-fit: cover;
     height: 100vh;
     &__container{
-        border: 1px solid white;
         position: relative;
         height: inherit;
-        width: $container-width - 5%;
+        width: $container-width - 8%;
         height: inherit;
         padding-top: $space-10x;
         box-sizing: border-box;
         margin: 0 auto;
     }
     &__head{
-        border: 1px solid white;
         height: $size-8x;
         @extend .flex;
         @extend .justify-content-between;
@@ -24,6 +22,42 @@
         font-weight: $weight-7;
         &--white{
             color:white;
+        }
+    }
+    // home bar
+    &__bar{
+        width: $size-6x;
+        height: $size-4x;
+        position: relative;
+        visibility: hidden;
+        @extend .flex;  
+        @extend .align-items-center;
+        &--design{
+            display: block;
+            width: inherit;
+            height: 2px;
+            background-color: white;
+            &::after{
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            &::before{
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            
+            
         }
     }
     // home menu 
@@ -178,9 +212,8 @@
     }
     // home desc
     &__info{
-        border: 1px solid white;
         position: relative;
-        margin-top: 25%;
+        margin-top: $space-19x*4;
         width: 100%;
         height: $size-12x;
         box-sizing: border-box;
@@ -201,7 +234,6 @@
     }
     // home sosial
     &__sosial{
-        border: 1px solid white;
         position: absolute;
         right: -$space-3x*8;
         transform: rotate(90deg);
@@ -235,7 +267,6 @@
     }
     // home footer
     &__footer{
-        border: 1px solid white;
         margin-top: $space-17x;
         height: $size-16x;
         @extend .flex;
@@ -258,6 +289,31 @@
     &__about--first{
         display: block;
         font-size: $size-15x;
+    }
+    // home navpage
+    &__navpage{
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+        width: 100%;
+        margin-top: $space-20x;
+        background-color: $secondary-color;
+        @extend .flex;
+        @extend .align-items-center;
+        @extend .flex-direction-column;
+        @extend .justify-content-center;
+        .home__dropdown--item{
+            width: 100%;
+            height: $size-9x;
+            @extend .flex;
+            @extend .justify-content-center;
+            
+            
+        }
+        .home__dropdown--link{
+            @extend .flex;
+            @extend .justify-content-center;
+        }
     }
 }
 
@@ -283,20 +339,22 @@
         width: 350px;
         margin-left: 50%;
     }
+    .home__bar{
+        visibility: visible;
+    }
 
 }
 @media (max-width: 720px){
-    .home__container{
-        
-    }
     .home__about{
         font-size: $size-5x;
-        padding-top: 200px;
+        
     }
     .home__info--desc{
         margin: 0;
-        width: 100%;
+        width: 80%;
+        font-size: $size-3x;
     }
+    
 
 }
 
