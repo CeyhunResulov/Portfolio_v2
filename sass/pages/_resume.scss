@@ -2,15 +2,15 @@ body{
     background-color: $secondary-color;
 }
 .home{
-    background-color: $fourth-color;
+    background-color: $secondary-color;
     height: 100vh;
     &__container{
         position: relative;
         height: 100vh;
         width: $container-width - 8%;
         height: inherit;
-        padding-top: $space-10x;
-        box-sizing: border-box;
+        padding-top: 0 !important;
+        // box-sizing: border-box;
         margin: 0 auto;
     }
     &__head{
@@ -319,18 +319,47 @@ body{
             margin: -5px auto;
         }
     }
+    
 }
 
 
 // resume
 .resume{
-    border: 1px solid blue;
+    border: 1px solid rgba(255,255,255,0.07);
     width: 65%;
     margin: 0 auto;
     background: none;
     @extend .flex;
     flex-wrap: wrap;
     position: relative;
+    &__container--name{
+        font-size: $size-14x;
+        font-weight: $weight-7;
+        color: white;
+        height: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__head{
+        position: fixed;
+        top: $space-10x;
+        left: 50%;
+        width: inherit;
+        transform: translate(-50%);
+        z-index: 10;
+    }
+    &__sosial{
+        position: fixed;
+        right: -$space-13x;
+        bottom: $size-15x*2;
+    }
+    &__footer{
+        position: fixed;
+        bottom: $size-8x;
+        height: $size-16x;
+    }
     &__box{
         border: 1px solid rgba(255,255,255,0.07);
         background: none;
@@ -339,16 +368,9 @@ body{
         left: 50%;
         transform: translateX(-50%);
     }
-    &__name{
-        margin: $space-20x*3 auto 0;
-        font-size: $size-14x;
-        font-weight: $weight-7;
-        color: white;
-        height: 20px;
-    }
     &__nav{
         position: absolute;
-        top: $space-19x*6;
+        top: $space-14x*9;
         left: $space-6x;
     }
     &__back{
@@ -363,7 +385,7 @@ body{
         border: 1px solid rgba(255,255,255,0.07);
         background: none;
         height: $size-17x*4;
-        margin: $space-20x*4 0 $space-20x 0;
+        margin: $space-20x*8 0 $space-20x 0;
         padding: $space-7x;
         box-sizing: border-box;
         background-color: $secondary-color;
@@ -466,7 +488,6 @@ body{
     }
     // pricing
     &__parent--pricing{
-        border: 1px solid red;
         height: auto;
         margin-bottom: $space-20x;
     }
@@ -518,6 +539,7 @@ body{
     &__edu--box{
         align-items: flex-start;
         padding-left: $space-6x;
+        box-sizing: border-box;
     }
     &__edu--year{
         color: $thirdary-color;
@@ -532,6 +554,60 @@ body{
     &__edu--name{
         margin-left: 40%;
     }
+
+    // design
+
+    &__parent--design{
+        border: 1px solid rgba(255,255,255,0.07);
+        height: 330px;
+        padding: $size-7x;
+        box-sizing: border-box;
+    }
+    &__design--progress{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__design--box{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    &__design--title{
+        color: white;
+        font: $size-4x;
+        margin-bottom: $space-3x;
+    }
+    &__design--skills{
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    &__design--percentage{
+        height: $size-x;
+        background-color: $font-color-first;
+        position: relative;
+    }
+    &__design--html{
+        width: 70%;
+    }
+    &__design--css{
+        width: 90%;
+    }
+    &__design--sass{
+        width: 75%;
+    }
+    &__design--js{
+        width: 50%;
+    }
+    &__design--percent{
+        position: absolute;
+        top: -$space-4x;
+        right: 0;
+        color: $thirdary-color;
+        font-size: $size-3x;
+    }
+
+
 }
 
 

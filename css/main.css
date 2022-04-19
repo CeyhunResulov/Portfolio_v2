@@ -1701,7 +1701,7 @@ body {
 }
 
 .home {
-  background-color: #1E1E1E;
+  background-color: #101010;
   height: 100vh;
 }
 
@@ -1710,9 +1710,7 @@ body {
   height: 100vh;
   width: 92%;
   height: inherit;
-  padding-top: 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  padding-top: 0 !important;
   margin: 0 auto;
 }
 
@@ -2054,13 +2052,47 @@ body {
 }
 
 .resume {
-  border: 1px solid blue;
+  border: 1px solid rgba(255, 255, 255, 0.07);
   width: 65%;
   margin: 0 auto;
   background: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
+}
+
+.resume__container--name {
+  font-size: 70px;
+  font-weight: 700;
+  color: white;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.resume__head {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  width: inherit;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 10;
+}
+
+.resume__sosial {
+  position: fixed;
+  right: -65px;
+  bottom: 150px;
+}
+
+.resume__footer {
+  position: fixed;
+  bottom: 40px;
+  height: 80px;
 }
 
 .resume__box {
@@ -2073,17 +2105,9 @@ body {
           transform: translateX(-50%);
 }
 
-.resume__name {
-  margin: 300px auto 0;
-  font-size: 70px;
-  font-weight: 700;
-  color: white;
-  height: 20px;
-}
-
 .resume__nav {
   position: absolute;
-  top: 570px;
+  top: 630px;
   left: 30px;
 }
 
@@ -2101,7 +2125,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.07);
   background: none;
   height: 340px;
-  margin: 400px 0 100px 0;
+  margin: 800px 0 100px 0;
   padding: 35px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2213,7 +2237,6 @@ body {
 }
 
 .resume__parent--pricing {
-  border: 1px solid red;
   height: auto;
   margin-bottom: 100px;
 }
@@ -2279,6 +2302,8 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   padding-left: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .resume__edu--year {
@@ -2296,6 +2321,75 @@ body {
 
 .resume__edu--name {
   margin-left: 40%;
+}
+
+.resume__parent--design {
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  height: 330px;
+  padding: 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.resume__design--progress {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.resume__design--box {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.resume__design--title {
+  color: white;
+  font: 20px;
+  margin-bottom: 15px;
+}
+
+.resume__design--skills {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.resume__design--percentage {
+  height: 5px;
+  background-color: #4bffa5;
+  position: relative;
+}
+
+.resume__design--html {
+  width: 70%;
+}
+
+.resume__design--css {
+  width: 90%;
+}
+
+.resume__design--sass {
+  width: 75%;
+}
+
+.resume__design--js {
+  width: 50%;
+}
+
+.resume__design--percent {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  color: #bbb;
+  font-size: 15px;
 }
 
 @media (max-width: 1900px) and (min-width: 1198px) {
