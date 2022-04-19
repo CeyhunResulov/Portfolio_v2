@@ -136,3 +136,16 @@
         border-radius: #{$i*5}px;
     }
 }
+
+
+// grid design
+@for $i from 1 through 12{
+    .col-#{$i}{
+        width: calc((100%/12)*#{$i});
+        box-sizing: border-box;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        // border: 1px solid red;
+    }
+}
