@@ -1,0 +1,671 @@
+body{
+    background-color: $secondary-color;
+}
+.home{
+    background-color: $secondary-color;
+    height: 100vh;
+    &__container{
+        position: relative;
+        height: 100vh;
+        width: $container-width - 8%;
+        height: inherit;
+        padding-top: 0 !important;
+        // box-sizing: border-box;
+        margin: 0 auto;
+    }
+    &__head{
+        height: $size-8x;
+        @extend .flex;
+        @extend .justify-content-between;
+        @extend .align-items-center;
+    }
+    &__reset{
+        color: $main-color;
+        font-weight: $weight-7;
+        &--white{
+            color:white;
+        }
+    }
+    // home bar
+    &__bar{
+        width: $size-6x;
+        height: $size-4x;
+        position: relative;
+        visibility: hidden;
+        @extend .flex;  
+        @extend .align-items-center;
+        &--design{
+            display: block;
+            width: inherit;
+            height: 2px;
+            background-color: white;
+            &::after{
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                position: absolute;
+                bottom: 0;
+                left: 0; 
+            }
+            &::before{
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }      
+        }  
+    }
+    &__bar--close{
+        font-size: $size-7x;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        display: none;
+    }
+    // home menu 
+    &__menu{
+        height: inherit;
+        width: 35%;
+        @extend .flex;
+        @extend .justify-content-between;
+    }
+    &__item{
+        overflow: hidden;
+        position: relative;
+        height: inherit;
+        @extend .flex;
+        @extend .align-items-center; 
+        &--link{
+            color: $main-color;
+            font-size: $size-3x;
+            font-weight: $weight-8;
+            display: block;
+            position: relative;
+            transition: all ease .4s;
+        }
+        &--link:hover{
+            color: white; 
+        }
+        &--icon{
+            color: $main-color;
+        }
+        &--active{
+            color: white !important;
+        }
+        &--hover{
+            position: absolute;
+            right: 0px;
+            opacity: 0;
+            visibility: hidden;
+            bottom: -$space-7x*1.5;
+            color: $main-color;
+            font-size: $size-3x;
+            font-weight: $weight-8;
+            height: inherit; 
+            width: inherit;
+            display: block;
+            
+        }
+    }
+    &__item:hover{
+        overflow: visible;
+        .home__dropdown{
+            visibility: visible;
+            opacity: 1;
+
+        }
+        .home__dropdown--contacts{
+            visibility: visible;
+            opacity: 1;
+        }
+        .home__item--link{
+            transform: translateY(-$space-8x);
+            opacity: 0;
+            visibility: visible;
+        }
+        .home__item--hover{
+            opacity: 1 !important;
+        }
+    
+    }
+    &__dropdown{
+        position: absolute;
+        top: $size-8x;
+        width: $size-18x*2;
+        transition: all ease .4s;
+        opacity: 0;
+        visibility: hidden;
+        &--sign{
+            height: $size-2x;
+            width: $size-2x;
+            background-color: $fourth-color;
+            transform: rotate(45deg);
+            margin: 0 0 -5px 10px;
+        }
+        &--item{
+            height: $size-10x;
+            width: $size-18x*2;
+            box-sizing: border-box;
+            background-color: $fourth-color;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            position: relative;
+            @extend .flex;
+            @extend .justify-content-between;
+            @extend .align-items-center;
+            
+        }
+        &--link{
+            overflow: hidden;
+            height: $size-5x;
+            width: $size-20x;
+            color: $main-color;
+            font-size: $size-3x - 3;
+            font-weight: $weight-7;
+            position: relative;
+            margin-left: $space-5x;
+            @extend .flex;
+            @extend .align-items-center;
+            @extend .justify-content-between;
+        }
+        &--link:hover{
+            .home__dropdown--up{
+                transform: translateY(-150%);
+                color: white;
+                visibility: hidden;
+                opacity: 0;
+
+            }
+            .home__dropdown--down{
+                transform: translateY(0%);
+                color: white;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &--up{
+            position: absolute;
+            transition: all ease .4s;
+            visibility: visible;
+            opacity: 1;
+
+        }
+        &--down{
+            position: absolute;
+            transform: translateY(150%);
+            transition: all ease .4s;
+            visibility: hidden;
+            opacity: 0;
+        }
+        &--contacts{
+            position: absolute;
+            top: $size-8x;
+            right: 0;
+            width: $size-18x*2;
+            transition: all ease .4s;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+    }
+    &__sign--contacts{
+        position: absolute;
+        right: $space-2x;
+        top: -$space-x;
+    }
+    // home desc
+    &__info{
+        position: relative;
+        margin-top: $space-19x*4;
+        width: 100%;
+        height: $size-12x;
+        box-sizing: border-box;
+        &--desc{
+            color: white;
+            position: absolute;
+            left: 50%;
+            right: 12em;
+            font-size: $size-4x;
+            font-weight: $weight-1;
+            line-height: $size-6x;
+        }
+        &--name{
+            font-weight: $weight-6;
+            color: green;
+        }
+
+    }
+    // home sosial
+    &__sosial{
+        position: absolute;
+        right: -$space-3x*8;
+        bottom: $size-15x*2;
+        transform: rotate(90deg);
+        @extend .flex;
+        @extend .align-items-center;
+        &--follow{
+            color: $thirdary-color;
+            font-size: $size-3x;
+        }
+        &--line{
+            background-color: $thirdary-color;
+            width: $size-10x;
+            height: 1px;
+            margin: 0 $space-4x;
+        }
+        &--icons{
+            display: flex;
+        }
+        &--icon{
+            margin-right: $space-4x; 
+            transform: rotate(-90deg);
+        }
+        &--link{
+            color: $thirdary-color;
+            font-size: $size-4x;
+            transition: all ease .3s;
+        }
+        &--link:hover{
+            color: white;
+        }
+    }
+    // home footer
+    &__footer{
+        position: absolute;
+        bottom: $size-8x;
+        height: $size-16x;
+        @extend .flex;
+        @extend .align-items-center;
+    }
+    &__contact{
+        margin-right: $space-15x;
+        &--email{
+            color: white;
+        }
+        &--number{
+            display: block;
+            color: white;
+            margin-top: $space-3x;
+        }
+    }
+    // home navpage
+    &__navpage{
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        top: 0;
+        background-color: $secondary-color;
+        transition: all ease 1s;
+        position: absolute;
+        .home__dropdown--item{
+            width: 100%;
+            height: $size-9x;
+            @extend .flex;
+            @extend .justify-content-center;
+            
+            
+        }
+        .home__dropdown--link{
+            margin: 0;
+            @extend .flex;
+            @extend .justify-content-center;
+        }
+        .home__dropdown--sign{
+            margin: -5px auto;
+        }
+    }
+    
+}
+
+
+// resume
+.resume{
+    border: 1px solid rgba(255,255,255,0.07);
+    width: 65%;
+    margin: 0 auto;
+    background: none;
+    @extend .flex;
+    flex-wrap: wrap;
+    position: relative;
+    &__container--name{
+        font-size: $size-14x;
+        font-weight: $weight-7;
+        color: white;
+        height: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__head{
+        position: fixed;
+        top: $space-10x;
+        left: 50%;
+        width: inherit;
+        transform: translate(-50%);
+        z-index: 10;
+    }
+    &__sosial{
+        position: fixed;
+        right: -$space-13x;
+        bottom: $size-15x*2;
+    }
+    &__footer{
+        position: fixed;
+        bottom: $size-8x;
+        height: $size-16x;
+    }
+    &__box{
+        border: 1px solid rgba(255,255,255,0.07);
+        background: none;
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__nav{
+        position: absolute;
+        top: $space-14x*9;
+        left: $space-6x;
+    }
+    &__back{
+        color: white;
+        font-size: $size-3x;
+    }
+    &__active{
+        color: $thirdary-color;
+        font-size: $size-3x;
+    }
+    &__my--about{
+        border: 1px solid rgba(255,255,255,0.07);
+        height: $size-10x !important;
+        margin: $space-20x*8 0 $space-20x 0;
+        padding: $space-7x;
+        box-sizing: border-box;
+        background-color: $secondary-color;
+        z-index: 1;
+    }
+    &__my--profil{
+        @extend .flex;
+        @extend .justify-content-between;
+        margin: 0 auto;
+        
+    }
+    &__my--foto{
+        width: 160px;
+        height: 180px;
+        
+    }
+    &__my--img{
+        width: 160px;
+        height: 100%;
+    
+    }
+    &__my--desc{
+        color: $thirdary-color;
+    }
+    &__my--box{
+        @extend .flex;
+        @extend .justify-content-between;
+        @extend .flex-direction-column;
+        height: inherit;
+        width: 75%;
+    }
+    &__my--info{
+        @extend .flex;
+        height: 50%;
+        position: relative;
+    }
+    &__info--item{
+        color: $thirdary-color;
+        margin: $space-2x $space-15x 0 0;
+    }
+    &__info--title{
+        color: $font-color-first;
+        font-size: $size-4x - 4;
+    }
+    &__cv--button{
+        border: 2px solid $font-color-first;
+        position: absolute;
+        left: 0;
+        bottom: -$space-15x;
+        color: $font-color-first;
+        padding: $space-3x - 2 $space-6x;
+        font-size: $size-4x - 4;
+    }
+
+    // service
+    &__parent--service{
+        margin-bottom: $space-15x;
+    }
+
+    &__service{
+        height: $size-15x*3;
+        border: 1px solid rgba(255,255,255,0.07);
+        background: none;
+        &--name{
+            color: white;
+            font-size: $size-5x;
+            font-weight: $weight-6;
+            margin: 0 0 $space-10x $space-5x;
+        }
+
+    }
+    &__service--box{
+        border: 1px solid rgba(255,255,255,0.07);
+        background: none;
+        height: $size-15x*3;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $secondary-color;
+        z-index: 7;
+
+
+    }
+    &__service--title{
+        color: $thirdary-color;
+        margin: $space-5x 0;
+
+    }
+    &__service--desc{
+        color: $thirdary-color;
+        width: 85%;
+        text-align: center;
+
+    }
+    &__service--icon{
+        font-size: $size-7x;
+        color: $font-color-first;
+    }
+    // pricing
+    &__parent--pricing{
+        height: auto;
+        margin-bottom: $space-20x;
+    }
+    &__pricing--name{
+        margin-top: $space-5x;
+    }
+    &__pricing--box{
+        height: $space-20x*5;
+    }
+    &__pricing--hours{
+        border: 1px solid white;
+        display: flex;
+    }
+    &__pricing--num{
+        color: rgb(238, 238, 238);
+        font-size: $size-9x;
+        font-weight: $weight-7;
+    }
+    &__pricing--hour{
+        color: $thirdary-color;
+        margin: $space-5x 0 0 $space-x;
+    }
+    &__pricing--dollar{
+        display: block;
+        color: $thirdary-color;
+        margin-right: $space-x;
+    }
+    &__pricing--sort{
+        color: $thirdary-color;
+        margin-top: $space-5x;
+    }
+    &__pricing--button{
+        border: 2px solid $font-color-first;
+        font-size: $size-3x;
+        font-weight: $weight-7;
+        padding: $space-2x + 2 $space-6x;
+        color: $font-color-first;
+        margin-top: $space-5x;
+    }
+    &__pricing--title{
+        color: rgb(238, 238, 238);
+        font-weight: $weight-7;
+    }
+    &__pricing--overline{
+        text-decoration: line-through;
+        color: $fourth-color+$fourth-color;
+    }
+    // experience and education
+    &__edu--box{
+        align-items: flex-start;
+        padding-left: $space-6x;
+        box-sizing: border-box;
+    }
+    &__edu--year{
+        color: $thirdary-color;
+        font-size: $size-3x - 3;
+    }
+    &__edu--title{
+        color: white;
+    }
+    &__edu--desc{
+        text-align: left;
+    }
+    &__edu--name{
+        margin-left: 40%;
+    }
+
+    // design
+
+    &__parent--design{
+        border: 1px solid rgba(255,255,255,0.07);
+        height: 330px;
+        padding: $size-7x;
+        box-sizing: border-box;
+    }
+    &__design--progress{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__design--box{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    &__design--title{
+        color: white;
+        font: $size-4x;
+        margin-bottom: $space-3x;
+    }
+    &__design--skills{
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    &__design--percentage{
+        height: $size-x;
+        background-color: $font-color-first;
+        position: relative;
+    }
+    &__design--html{
+        width: 70%;
+    }
+    &__design--css{
+        width: 90%;
+    }
+    &__design--sass{
+        width: 75%;
+    }
+    &__design--js{
+        width: 50%;
+    }
+    &__design--percent{
+        position: absolute;
+        top: -$space-4x;
+        right: 0;
+        color: $thirdary-color;
+        font-size: $size-3x;
+    }
+
+
+}
+
+
+@media (max-width: 1900px)and(min-width: 1198px){
+    .home__navpage{
+        display: none;
+    }
+    .home__bar{
+        display: none;
+    }
+    
+
+}
+    
+// Responsive
+@media (max-width: 1198px){
+    .home{
+        height: 100vh;
+    }
+    .home__menu{
+        display: none;
+    }
+    .home__sosial--follow{
+        opacity: 0;
+    }
+    .home__sosial--line{
+        opacity: 0;
+    }
+    .home__about{
+        font-size: $size-11x;
+    }
+    .home__contact{
+        display: none;
+    }
+    .home__info--desc{
+        position: static;
+        width: 350px;
+        margin-left: 50%;
+    }
+    .home__bar{
+        visibility: visible;
+    }
+
+}
+@media (max-width: 720px){
+    .home{
+        height: 100vh;
+    }
+    .home__about{
+        font-size: $size-5x;
+        
+    }
+    .home__info--desc{
+        margin: 0;
+        width: 80%;
+        font-size: $size-3x;
+    }
+    
+
+}
+
+
