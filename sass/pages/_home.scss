@@ -1,5 +1,5 @@
 .home{
-    background-color: $secondary-color;
+    background-color: red;
     object-fit: cover;
     height: 100vh;
     &__container{
@@ -7,7 +7,7 @@
         height: inherit;
         width: $container-width - 8%;
         height: inherit;
-        padding-top: $space-10x;
+        padding-top: $space-10x !important;
         box-sizing: border-box;
         margin: 0 auto;
     }
