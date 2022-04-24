@@ -9,8 +9,6 @@ body{
         height: 100vh;
         width: $container-width - 8%;
         height: inherit;
-        padding-top: 0 !important;
-        // box-sizing: border-box;
         margin: 0 auto;
     }
     &__head{
@@ -332,6 +330,9 @@ body{
     @extend .flex;
     flex-wrap: wrap;
     position: relative;
+    &__container{
+        padding-top: 0 !important;
+    }
     &__container--name{
         font-size: $size-14x;
         font-weight: $weight-7;
@@ -343,6 +344,7 @@ body{
         transform: translate(-50%,-50%);
     }
     &__head{
+        padding: 0;
         position: fixed;
         top: $space-10x;
         left: 50%;

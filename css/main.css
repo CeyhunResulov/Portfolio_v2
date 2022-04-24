@@ -1291,13 +1291,13 @@ table {
 }
 
 .home__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   height: inherit;
   width: 92%;
-  height: inherit;
   padding-top: 50px !important;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
@@ -1711,7 +1711,6 @@ body {
   height: 100vh;
   width: 92%;
   height: inherit;
-  padding-top: 0 !important;
   margin: 0 auto;
 }
 
@@ -2062,6 +2061,10 @@ body {
   position: relative;
 }
 
+.resume__container {
+  padding-top: 0 !important;
+}
+
 .resume__container--name {
   font-size: 70px;
   font-weight: 700;
@@ -2075,6 +2078,7 @@ body {
 }
 
 .resume__head {
+  padding: 0;
   position: fixed;
   top: 50px;
   left: 50%;

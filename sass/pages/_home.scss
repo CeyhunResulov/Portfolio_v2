@@ -4,10 +4,10 @@
     object-fit: cover;
     height: 100vh;
     &__container{
+        box-sizing: border-box;
         position: relative;
         height: inherit;
         width: $container-width - 8%;
-        height: inherit;
         padding-top: $space-10x !important;
         box-sizing: border-box;
         margin: 0 auto;
