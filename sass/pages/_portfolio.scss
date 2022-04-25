@@ -83,12 +83,11 @@
         color: $font-color-first;
     }
     &__parent{
-        border: 1px solid red;
-        height: 4000px;
+        
+        height: 3000px;
         margin-bottom: $space-15x;
         position: relative;
         &--img{
-            background-color: blue;
             height: 100%;
             width: 100%;
             object-fit: cover;
@@ -100,7 +99,7 @@
         left: 0;
         height: 600px;
         width: 50%;
-        background-color: red;
+        
         padding-right: $size-10x; 
         box-sizing: border-box;
     }
@@ -112,7 +111,7 @@
         height: 600px;
         padding-left: $size-10x;
         box-sizing: border-box;
-        background-color: red;
+        
     }
     &__content{
         position: absolute;
@@ -122,7 +121,7 @@
         height: 270px;
         padding-right: $size-10x;
         box-sizing: border-box;
-        background-color: red;
+        
         
     }
     &__video{
@@ -130,10 +129,10 @@
         right: 0;
         top: 700px;
         width: 50%;
-        height: 600px;
+        height: 500px;
         padding-left: $size-10x;
         box-sizing: border-box;
-        background-color: red;
+        
 
     }
     &__link{
@@ -144,18 +143,50 @@
         height: 270px;
         padding-right: $size-10x;
         box-sizing: border-box;
-        background-color: red;
+        
 
     }
     &__music{
         position: absolute;
         right: 0;
-        top: 1400px;
+        top: 1300px;
         width: 50%;
         height: 270px;
         padding-left: $size-10x;
         box-sizing: border-box;
-        background-color: red;
+        
+    }
+    &__image--left{
+        position: absolute;
+        left: 0;
+        top: 1440px;
+        width: 50%;
+        height: 700px;
+        padding-right: $size-10x;
+        box-sizing: border-box;
+        
+
+    }
+    &__image--right{
+        position: absolute;
+        right: 0;
+        top: 1670px;
+        width: 50%;
+        height: 500px;
+        padding-left: $size-10x;
+        box-sizing: border-box;
+        
+
+    }
+    &__content--second{
+        position: absolute;
+        left: 0;
+        top: 2240px;
+        width: 50%;
+        height: 700px;
+        padding-right: $size-10x;
+        box-sizing: border-box;
+        
     }
 
 }

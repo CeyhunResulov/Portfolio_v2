@@ -2560,14 +2560,12 @@ body {
 }
 
 .portfolio__parent {
-  border: 1px solid red;
-  height: 4000px;
+  height: 3000px;
   margin-bottom: 75px;
   position: relative;
 }
 
 .portfolio__parent--img {
-  background-color: blue;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -2580,7 +2578,6 @@ body {
   left: 0;
   height: 600px;
   width: 50%;
-  background-color: red;
   padding-right: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2595,7 +2592,6 @@ body {
   padding-left: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: red;
 }
 
 .portfolio__content {
@@ -2607,7 +2603,6 @@ body {
   padding-right: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: red;
 }
 
 .portfolio__video {
@@ -2615,11 +2610,10 @@ body {
   right: 0;
   top: 700px;
   width: 50%;
-  height: 600px;
+  height: 500px;
   padding-left: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: red;
 }
 
 .portfolio__link {
@@ -2631,19 +2625,50 @@ body {
   padding-right: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: red;
 }
 
 .portfolio__music {
   position: absolute;
   right: 0;
-  top: 1400px;
+  top: 1300px;
   width: 50%;
   height: 270px;
   padding-left: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: red;
+}
+
+.portfolio__image--left {
+  position: absolute;
+  left: 0;
+  top: 1440px;
+  width: 50%;
+  height: 700px;
+  padding-right: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.portfolio__image--right {
+  position: absolute;
+  right: 0;
+  top: 1670px;
+  width: 50%;
+  height: 500px;
+  padding-left: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.portfolio__content--second {
+  position: absolute;
+  left: 0;
+  top: 2240px;
+  width: 50%;
+  height: 700px;
+  padding-right: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (max-width: 1900px) and (min-width: 1198px) {
