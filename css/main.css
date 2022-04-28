@@ -2459,6 +2459,15 @@ body {
   position: relative;
 }
 
+.portfolio__hover {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.portfolio__hover:hover {
+  background-color: #4bffa5;
+}
+
 .portfolio__container {
   padding-top: 0 !important;
 }

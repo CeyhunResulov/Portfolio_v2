@@ -7,6 +7,12 @@
     @extend .flex;
     flex-wrap: wrap;
     position: relative;
+    &__hover{
+        transition: all ease .5s;
+        &:hover{
+            background-color: $font-color-first;
+        }
+    }
     &__container{
         padding-top: 0 !important;
     }
