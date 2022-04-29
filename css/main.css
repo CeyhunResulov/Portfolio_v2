@@ -2466,6 +2466,7 @@ body {
 
 .portfolio__hover:hover {
   background-color: #4bffa5;
+  z-index: 1000;
 }
 
 .portfolio__container {
