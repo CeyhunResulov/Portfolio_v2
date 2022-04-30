@@ -1,0 +1,205 @@
+.blog{
+    border: 1px solid rgba(255,255,255,0.07);
+    width: 65%;
+    margin: 0 auto;
+    background: none;
+    @extend .flex;
+    flex-wrap: wrap;
+    position: relative;
+    &__hover{
+        transition: all ease .5s;
+        &:hover{
+            background-color: $font-color-first;
+            z-index: 1000;
+        }
+    }
+    &__container{
+        padding-top: 0 !important;
+    }
+    &__container--name{
+        font-size: $size-14x;
+        font-weight: $weight-7;
+        color: white;
+        height: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__head{
+        position: fixed;
+        top: $space-10x;
+        left: 50%;
+        width: inherit;
+        transform: translate(-50%);
+        z-index: 10;
+    }
+    &__sosial{
+        position: fixed;
+        right: -$space-13x;
+        bottom: $size-15x*2;
+    }
+    &__footer{
+        position: fixed;
+        bottom: $size-8x;
+        height: $size-16x;
+    }
+    &__box{
+        border: 1px solid rgba(255,255,255,0.07);
+        background: none;
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__nav{
+        position: absolute;
+        top: $space-14x*9;
+        left: $space-6x;
+    }
+    &__back{
+        color: white;
+        font-size: $size-3x;
+    }
+    &__active{
+        color: $thirdary-color;
+        font-size: $size-3x;
+    }
+    &__navbar{
+        border: 1px solid rgba(255,255,255,0.07);
+        margin: $space-20x*9 0 $space-15x 0;
+        padding: $space-9x $space-9x;
+        box-sizing: border-box;
+        background-color: $secondary-color;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        &--items{
+            height: 20px;
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+        }
+        &--link{
+            color: white;
+            font-size: $size-3x+1;
+        }
+    }
+    &__link--active{
+        color: $font-color-first;
+    }
+    &__parent{
+        border: 3px solid white;
+        height: 3000px;
+        margin-top: 100vh;
+        margin-bottom: $space-15x;
+        position: relative;
+        display: flex;
+        &--left{
+            border: 1px solid blue;
+            height: 100%;
+            width: calc(100% * 2/3);
+        }
+        &--right{
+            border: 1px solid red;
+            height: 100%;
+            width: calc(100% / 3);
+        }
+    }
+    &__gallery--left{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 600px;
+        width: 50%;
+        
+        padding-right: $size-10x; 
+        box-sizing: border-box;
+    }
+    &__gallery--right{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 600px;
+        padding-left: $size-10x;
+        box-sizing: border-box;
+        
+    }
+    &__content{
+        position: absolute;
+        left: 0;
+        top: 700px;
+        width: 50%;
+        height: 270px;
+        padding-right: $size-10x;
+        box-sizing: border-box;
+        
+        
+    }
+    &__video{
+        position: absolute;
+        right: 0;
+        top: 700px;
+        width: 50%;
+        height: 500px;
+        padding-left: $size-10x;
+        box-sizing: border-box;
+        
+
+    }
+    &__link{
+        position: absolute;
+        left: 0;
+        top: 1070px;
+        width: 50%;
+        height: 270px;
+        padding-right: $size-10x;
+        box-sizing: border-box;
+        
+
+    }
+    &__music{
+        position: absolute;
+        right: 0;
+        top: 1300px;
+        width: 50%;
+        height: 270px;
+        padding-left: $size-10x;
+        box-sizing: border-box;
+        
+    }
+    &__image--left{
+        position: absolute;
+        left: 0;
+        top: 1440px;
+        width: 50%;
+        height: 700px;
+        padding-right: $size-10x;
+        box-sizing: border-box;
+        
+
+    }
+    &__image--right{
+        position: absolute;
+        right: 0;
+        top: 1670px;
+        width: 50%;
+        height: 500px;
+        padding-left: $size-10x;
+        box-sizing: border-box;
+        
+
+    }
+    &__content--second{
+        position: absolute;
+        left: 0;
+        top: 2240px;
+        width: 50%;
+        height: 700px;
+        padding-right: $size-10x;
+        box-sizing: border-box;
+        
+    }
+
+}
