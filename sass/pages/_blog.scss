@@ -88,23 +88,118 @@
     &__link--active{
         color: $font-color-first;
     }
+    &__latest--post{
+        font-size: 24px;
+        color: white;
+        margin-left: $space-7x;
+    }
     &__parent{
-        border: 3px solid white;
-        height: 3000px;
         margin-top: 100vh;
-        margin-bottom: $space-15x;
+        padding: $space-15x*2 0;
         position: relative;
         display: flex;
         &--left{
-            border: 1px solid blue;
             height: 100%;
             width: calc(100% * 2/3);
         }
         &--right{
-            border: 1px solid red;
             height: 100%;
             width: calc(100% / 3);
         }
+        &--box{
+            border: 1px solid rgba(255,255,255,0.07);
+            background-color: $secondary-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: $space-15x;
+            padding: $space-7x;
+        }
+        &--img{
+            width: 536px;
+            height: 300px;
+            margin-bottom: $space-7x;
+        }
+        &--date{
+            margin-bottom: $space-4x;
+            color: $thirdary-color;
+            display: block;
+            font-size: 14px;
+        }
+        &--title{
+            color: white;
+            margin-bottom: $space-4x;
+            font-size: 24px;
+        }
+        &--desc{
+            color: $thirdary-color;
+            font-size: 16px;
+        }
+    }
+    &__search{
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: $space-20x auto;
+        &--form{
+            margin-bottom: $space-10x;
+            position: relative;
+        }
+        &--input{
+            background: none;
+            border: none;   
+            width: 100%;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            padding: $space-2x 0;
+            color: white;
+            font-size: 18px;
+            
+        }
+        &--sign{
+            color: white;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &--submit{
+            display: none;
+        }
+        &--title{
+            font-size: 20px;
+            color: white; 
+            margin-bottom: $space-2x;  
+        }
+        &--liner{
+            display: block;
+            width: 40px;
+            height: 1px;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            margin-bottom: $space-3x;
+        }
+        &--item{
+            margin-bottom: $space-10x;
+            width: 70%;
+        }
+        &--icon{
+            margin-bottom: $space-3x;
+        }
+        &--link{
+            font-size: 14px;
+            color: white;
+            text-decoration: underline;
+            transition: all ease .5s;
+            &:hover{
+                color: $font-color-first;
+                text-decoration: none;
+            }
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     &__gallery--left{
         position: absolute;
