@@ -1,4 +1,4 @@
-.blog{
+.contacts{
     border: 1px solid rgba(255,255,255,0.07);
     width: 65%;
     margin: 0 auto;
@@ -98,42 +98,105 @@
         padding: $space-15x*2 0;
         position: relative;
         display: flex;
-        &--left{
-            height: 100%;
-            width: calc(100% * 2/3);
-        }
-        &--right{
-            height: 100%;
-            width: calc(100% / 3);
-        }
-        &--box{
+        height: 1300px;
+        &--phone{
             border: 1px solid rgba(255,255,255,0.07);
-            background-color: $secondary-color;
+            position: absolute;
+            padding: $space-7x;
+            box-sizing: border-box;
+            width:  45%;
+            left: 0;
+            top: $space-14x*3;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: $space-15x;
+            justify-content: center;  
+            background-color: $secondary-color; 
+        }
+        &--email{
+            border: 1px solid rgba(255,255,255,0.07);
+            position: absolute;
             padding: $space-7x;
+            box-sizing: border-box;
+            width:  45%;
+            right: 0;
+            top: $space-14x*3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $secondary-color; 
         }
-        &--img{
-            width: 536px;
-            height: 300px;
-            margin-bottom: $space-7x;
+        &--address{
+            border: 1px solid rgba(255,255,255,0.07);
+            position: absolute; 
+            padding: $space-7x;
+            box-sizing: border-box;
+            width:  45%;
+            left: 0;
+            top: $space-20x*5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; 
+            background-color: $secondary-color; 
+
         }
-        &--date{
-            margin-bottom: $space-4x;
-            color: $thirdary-color;
-            display: block;
-            font-size: 14px;
+        &--work{
+            border: 1px solid rgba(255,255,255,0.07);
+            position: absolute;
+            padding: $space-7x;
+            box-sizing: border-box;
+            width:  45%;
+            right: 0;
+            top: $space-20x*5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; 
+            background-color: $secondary-color; 
+        }
+        &--link{
+            font-size: 16px;
+            color: white;
+        }
+        &--icon{
+            margin-bottom: $space-5x;
+            font-size: $space-7x;
+            color: $font-color-first;
+            transform: rotateY(180deg);
+        }
+        &--name{
+            font-size: 16px;
+            color: white;
+            margin-bottom: $space-5x;
+        }
+        &--desc{
+            font-size: 16px;
+            
         }
         &--title{
             color: white;
-            margin-bottom: $space-4x;
+            margin: 0 0 $space-4x $space-6x;
             font-size: 24px;
         }
         &--desc{
             color: $thirdary-color;
             font-size: 16px;
+        }
+        &--sdtitle{
+            font-size: 36px;
+            color: white;
+            position: absolute;
+            bottom: 300px;
+        }
+        &--form{
+            border: 1px solid white;
+            position: absolute;
+            height: 300px;
+            width: 100%;
+            bottom: $space-15x;
+            background-color: $secondary-color;
         }
     }
     &__search{
