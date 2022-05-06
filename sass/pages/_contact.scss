@@ -94,11 +94,13 @@
         margin-left: $space-7x;
     }
     &__parent{
+        border: 1px solid blue;
         margin-top: 100vh;
         padding: $space-15x*2 0;
+        box-sizing: border-box;
         position: relative;
         display: flex;
-        height: 1300px;
+        height: 1400px;
         &--phone{
             border: 1px solid rgba(255,255,255,0.07);
             position: absolute;
@@ -179,185 +181,66 @@
             color: white;
             margin: 0 0 $space-4x $space-6x;
             font-size: 24px;
+            font-weight: 700;
         }
         &--desc{
             color: $thirdary-color;
             font-size: 16px;
         }
         &--sdtitle{
-            font-size: 36px;
+            font-size: 24px;
+            font-weight: 700;
             color: white;
             position: absolute;
-            bottom: 300px;
+            bottom: 520px;
+            left: $space-6x;
+        }
+        &--input{
+            width: 100%;
+            font-size: 16px;
+            color: white;
+            background: none;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            margin-bottom: $space-5x;
+            padding: $space-3x 0;
+            box-sizing: border-box;
+        }
+        &--submit{
+            padding: $space-2x $space-5x;
+            font-size: 16px;
+            color: $font-color-first;
+            background: none;
+            border: 2px solid $font-color-first;
+            
+            
+        }
+        &--message{
+            height: 110px;
+            width: 100%;
+            background: none;
+            color: white;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            resize: none;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: $space-5x;
+            padding: $space-3x 0;
+
+
         }
         &--form{
-            border: 1px solid white;
+            border: 1px solid rgba(255,255,255,0.07);
             position: absolute;
-            height: 300px;
+            left: 0;
             width: 100%;
             bottom: $space-15x;
             background-color: $secondary-color;
+            padding: $space-7x;
+            box-sizing: border-box;
         }
     }
-    &__search{
-        height: 800px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: $space-20x auto;
-        &--form{
-            margin-bottom: $space-10x;
-            position: relative;
-        }
-        &--input{
-            background: none;
-            border: none;   
-            width: 100%;
-            border-bottom: 1px solid rgba(255,255,255,0.07);
-            padding: $space-2x 0;
-            color: white;
-            font-size: 18px;
-            
-        }
-        &--sign{
-            color: white;
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        &--submit{
-            display: none;
-        }
-        &--title{
-            font-size: 20px;
-            color: white; 
-            margin-bottom: $space-2x;  
-        }
-        &--liner{
-            display: block;
-            width: 40px;
-            height: 1px;
-            border-bottom: 1px solid rgba(255,255,255,0.07);
-            margin-bottom: $space-3x;
-        }
-        &--item{
-            margin-bottom: $space-10x;
-            width: 70%;
-        }
-        &--icon{
-            margin-bottom: $space-3x;
-        }
-        &--link{
-            font-size: 14px;
-            color: white;
-            text-decoration: underline;
-            transition: all ease .5s;
-            &:hover{
-                color: $font-color-first;
-                text-decoration: none;
-            }
-        }
-    }
-    &__img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    &__gallery--left{
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 600px;
-        width: 50%;
-        
-        padding-right: $size-10x; 
-        box-sizing: border-box;
-    }
-    &__gallery--right{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50%;
-        height: 600px;
-        padding-left: $size-10x;
-        box-sizing: border-box;
-        
-    }
-    &__content{
-        position: absolute;
-        left: 0;
-        top: 700px;
-        width: 50%;
-        height: 270px;
-        padding-right: $size-10x;
-        box-sizing: border-box;
-        
-        
-    }
-    &__video{
-        position: absolute;
-        right: 0;
-        top: 700px;
-        width: 50%;
-        height: 500px;
-        padding-left: $size-10x;
-        box-sizing: border-box;
-        
-
-    }
-    &__link{
-        position: absolute;
-        left: 0;
-        top: 1070px;
-        width: 50%;
-        height: 270px;
-        padding-right: $size-10x;
-        box-sizing: border-box;
-        
-
-    }
-    &__music{
-        position: absolute;
-        right: 0;
-        top: 1300px;
-        width: 50%;
-        height: 270px;
-        padding-left: $size-10x;
-        box-sizing: border-box;
-        
-    }
-    &__image--left{
-        position: absolute;
-        left: 0;
-        top: 1440px;
-        width: 50%;
-        height: 700px;
-        padding-right: $size-10x;
-        box-sizing: border-box;
-        
-
-    }
-    &__image--right{
-        position: absolute;
-        right: 0;
-        top: 1670px;
-        width: 50%;
-        height: 500px;
-        padding-left: $size-10x;
-        box-sizing: border-box;
-        
-
-    }
-    &__content--second{
-        position: absolute;
-        left: 0;
-        top: 2240px;
-        width: 50%;
-        height: 700px;
-        padding-right: $size-10x;
-        box-sizing: border-box;
-        
-    }
-
 }
