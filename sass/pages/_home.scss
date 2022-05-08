@@ -1,7 +1,4 @@
 .home{
-    border: 1px solid blue;
-    background-color: red;
-    object-fit: cover;
     height: 100vh;
     &__container{
         box-sizing: border-box;
@@ -11,7 +8,52 @@
         padding-top: $space-10x !important;
         box-sizing: border-box;
         margin: 0 auto;
+        &--project{
+            border-radius: 50%;
+            border: 3px solid white;
+            position: absolute;
+            left: 0%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+        }
+        &--pro{
+            border: 3px solid white;
+            width: 0px;
+            height: 270px;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translateY(-50%);
+            z-index: -5;
+            transition: all linear .5s;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            box-shadow: -10px -10px 20px white;
+            & i{
+                color: white;
+                font-size: 30px;
+            }
+        }
+        &--portrait{
+            border: 3px solid white;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            box-shadow: -5px -5px  10px white;
+        }
+        &--image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
     }
+
     &__head{
         height: $size-8x;
         @extend .flex;
@@ -21,6 +63,7 @@
     &__reset{
         color: $main-color;
         font-weight: $weight-7;
+        font-size: 25px;
         &--white{
             color:white;
         }
