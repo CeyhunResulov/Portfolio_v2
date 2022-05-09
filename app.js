@@ -52,6 +52,7 @@ setInterval(firstText, 100, [
 
 function openNavbar() {
   document.querySelector(".home__navpage").style.visibility = "visible";
+  document.querySelector(".home__navpage").style.zIndex = 100;
   document.querySelector(".home__navpage").style.opacity = "1";
   document.querySelector(".home").style.height = "850px";
   document.querySelector(".home__bar").style.visibility = "hidden";
@@ -73,13 +74,24 @@ function closeNavbar() {
 const projects = document.querySelector(".home__reset");
 const projectsBox = document.querySelector(".home__container--pro");
 const reset = document.querySelector(".home__container--pro i");
+const portrait = document.querySelector(".home__container--portrait");
+const pro = document.querySelector(".home__container--pro");
+const footer = document.querySelector(".home__desc");
 projects.addEventListener("click", showProjects);
 reset.addEventListener("click", hiddenProjects);
 
 function showProjects(e) {
-  projectsBox.style.width = 500 + "px";
+  if (window.innerWidth > 720) {
+    projectsBox.style.width = 500 + "px";
+  } else {
+    pro.style.animation = "project 1s ease forwards";
+    footer.style.marginTop = "200px";
+  }
 }
 
 function hiddenProjects(e) {
   projectsBox.style.width = 0;
+  if (window.innerWidth < 720) {
+    pro.style.animation = "backpro 1s ease forwards";
+  }
 }
