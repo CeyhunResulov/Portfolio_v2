@@ -16,12 +16,11 @@
   </head>
   <body>
     <section class="home">
-    <div class="home__container resume__container">
+      <span class="home__cursor"></span>
+      <div class="home__container resume__container">
         <span class="resume__container--name">Resume</span>
         <div class="home__head resume__head">
-          <a href="" class="home__reset"
-            >Alejandro <span class="home__reset--white">Abeyto</span></a
-          >
+          <a href="home.html" class="home__reset">CR</a>
           <a class="home__bar" onclick="openNavbar()">
             <span class="home__bar--design"></span>
           </a>
@@ -30,12 +29,10 @@
           </a>
           <ul class="home__menu">
             <li class="home__item">
-              <a href="home.html" class="home__item--link home__item--active"
+              <a href="home.html" class="home__item--link"
                 >Home <i class="fas fa-angle-down"></i
               ></a>
-              <a
-                href="home.html"
-                class="home__item--link home__item--hover home__item--active"
+              <a href="home.html" class="home__item--link home__item--hover"
                 >Home <i class="fas fa-angle-down"></i
               ></a>
               <ul class="home__dropdown">
@@ -67,10 +64,12 @@
               </ul>
             </li>
             <li class="home__item">
-              <a href="resume.html" class="home__item--link"
+              <a href="resume.html" class="home__item--link home__item--active"
                 >Resume <i class="fas fa-angle-down"></i
               ></a>
-              <a href="resume.html" class="home__item--link home__item--hover"
+              <a
+                href="resume.html"
+                class="home__item--link home__item--hover home__item--active"
                 >Resume <i class="fas fa-angle-down"></i
               ></a>
               <ul class="home__dropdown">
@@ -91,13 +90,17 @@
             </li>
             <li class="home__item">
               <a href="portfolio.html" class="home__item--link">Portfolio</a>
-              <a href="portfolio.html" class="home__item--link home__item--hover"
+              <a
+                href="portfolio.html"
+                class="home__item--link home__item--hover"
                 >Portfolio</a
               >
             </li>
             <li class="home__item">
               <a href="blog.html" class="home__item--link">Blog</a>
-              <a href="blog.html" class="home__item--link home__item--hover">Blog</a>
+              <a href="blog.html" class="home__item--link home__item--hover"
+                >Blog</a
+              >
             </li>
             <li class="home__item">
               <a href="contact.html" class="home__item--link"
@@ -267,30 +270,26 @@
         <!-- resume -->
         <div class="resume">
           <div class="resume__nav">
-            <a href="" class="resume__back">Home</a>
+            <a href="home.html" class="resume__back">Home</a>
             <span class="resume__active">/ Resume</span>
           </div>
           <div class="resume__box col-4"></div>
           <div class="resume__my--about">
             <div class="resume__my--profil">
               <div class="resume__my--foto">
-                <img
-                  src="https://cvio-jekyll.netlify.app/assets/img/man2.jpg"
-                  alt=""
-                  class="resume__my--img"
-                />
+                <img src="img/images.jpg" alt="" class="resume__my--img" />
               </div>
               <div class="resume__my--box">
                 <p class="resume__my--desc">
-                  Hello! I’m Daniel Curry. Web designer from USA, California,
-                  San Francisco. I have rich experience in web site design and
+                  Hello! I’m Ceyhun. Web designer from USA, California, San
+                  Francisco. I have rich experience in web site design and
                   building, also I am good at wordpress. I love to talk with you
                   about our unique.
                 </p>
                 <div class="resume__my--info">
                   <ul class="resume__info--left">
                     <li class="resume__info--item">
-                      <span class="resume__info--title">Age: </span>20
+                      <span class="resume__info--title">Age: </span>22
                     </li>
                     <li class="resume__info--item">
                       <span class="resume__info--title">Freelance: </span
@@ -303,11 +302,11 @@
                   </ul>
                   <ul class="resume__info--right">
                     <li class="resume__info--item">
-                      <span class="resume__info--title">Residence: </span>USA
+                      <span class="resume__info--title">Residence: </span
+                      >Azerbaijan
                     </li>
                     <li class="resume__info--item">
-                      <span class="resume__info--title">Address: </span> San
-                      Francisco
+                      <span class="resume__info--title">Address: </span>baku
                     </li>
                     <li class="resume__info--item">
                       <span class="resume__info--title">e-mail: </span
@@ -406,7 +405,7 @@
               <a href="" class="resume__pricing--button">Buy Now</a>
             </div>
             <div class="resume__service--box resume__pricing--box">
-              <a class="resume__service--icon"><i class="fas fa-rocket"></i></i></a>
+              <a class="resume__service--icon"><i class="fas fa-rocket"></i></a>
               <h3 class="resume__service--title resume__pricing--title">
                 Premium
               </h3>
@@ -429,30 +428,41 @@
           <div class="col-12 bcg-none resume__parent--service">
             <div class="resume__service--box resume__edu--box">
               <span class="resume__edu--year">2013-present</span>
-              <h3 class="resume__service--title resume__edu--title">Art Director - Facebook Inc</h3>
+              <h3 class="resume__service--title resume__edu--title">
+                Art Director - Facebook Inc
+              </h3>
               <p class="resume__service--desc resume__edu--desc">
-               Collaborate with creative and development teams on the execution of ideas.
+                Collaborate with creative and development teams on the execution
+                of ideas.
               </p>
             </div>
             <div class="resume__service--box resume__edu--box">
               <span class="resume__edu--year">2006 - 2008</span>
-              <h3 class="resume__service--title resume__edu--title">Art University of New York</h3>
+              <h3 class="resume__service--title resume__edu--title">
+                Art University of New York
+              </h3>
               <p class="resume__service--desc resume__edu--desc">
-                Bachelor's Degree in Computer Science ABC Technical Institute, Jefferson, Missouri
+                Bachelor's Degree in Computer Science ABC Technical Institute,
+                Jefferson, Missouri
               </p>
             </div>
           </div>
           <div class="col-12 bcg-none resume__parent--service">
             <div class="resume__service--box resume__edu--box">
               <span class="resume__edu--year">2011 - 2012</span>
-              <h3 class="resume__service--title resume__edu--title">Front-end Developer - Google Inc</h3>
+              <h3 class="resume__service--title resume__edu--title">
+                Front-end Developer - Google Inc
+              </h3>
               <p class="resume__service--desc resume__edu--desc">
-                Monitored technical aspects of the front-end delivery for several projects.
+                Monitored technical aspects of the front-end delivery for
+                several projects.
               </p>
             </div>
             <div class="resume__service--box resume__edu--box">
               <span class="resume__edu--year">2005 - 2006</span>
-              <h3 class="resume__service--title resume__edu--title">Programming Course</h3>
+              <h3 class="resume__service--title resume__edu--title">
+                Programming Course
+              </h3>
               <p class="resume__service--desc resume__edu--desc">
                 Coursework - Git, WordPress, Javascript, iOS, Android.
               </p>
@@ -461,23 +471,32 @@
           <div class="col-12 bcg-none resume__parent--service">
             <div class="resume__service--box resume__edu--box">
               <span class="resume__edu--year">2009 - 2010</span>
-              <h3 class="resume__service--title resume__edu--title">Senior Developer - Abc Inc</h3>
+              <h3 class="resume__service--title resume__edu--title">
+                Senior Developer - Abc Inc
+              </h3>
               <p class="resume__service--desc resume__edu--desc">
                 Optimize website performance using latest technology.
               </p>
             </div>
             <div class="resume__service--box resume__edu--box">
               <span class="resume__edu--year">2004 - 2005</span>
-              <h3 class="resume__service--title resume__edu--title">Web Design Course</h3>
+              <h3 class="resume__service--title resume__edu--title">
+                Web Design Course
+              </h3>
               <p class="resume__service--desc resume__edu--desc">
-               Converted Photoshop layouts to web pages using HTML, CSS, and JavaScript
+                Converted Photoshop layouts to web pages using HTML, CSS, and
+                JavaScript
               </p>
             </div>
           </div>
 
           <!-- design -->
-          <h1 class="resume__service--name resume__pricing--name">Coding Skills</h1>
-          <div class="col-12 bcg-none resume__parent--service resume__parent--design">
+          <h1 class="resume__service--name resume__pricing--name">
+            Coding Skills
+          </h1>
+          <div
+            class="col-12 bcg-none resume__parent--service resume__parent--design"
+          >
             <ul class="resume__design--progress">
               <li class="resume__design--box">
                 <h1 class="resume__design--title">HTML</h1>
@@ -512,12 +531,11 @@
                 </div>
               </li>
             </ul>
-
           </div>
-
         </div>
       </div>
     </section>
     <script src="app.js"></script>
+    <script src="resume.js"></script>
   </body>
 </html>

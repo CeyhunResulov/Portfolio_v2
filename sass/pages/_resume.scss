@@ -3,6 +3,17 @@ body{
 }
 .home{
     height: 100vh;
+    &__cursor{
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1000;
+        width: 26px;
+        height:26px;
+        background-color: $font-color-first;
+        opacity: 0.4;
+        transform: translate(-50%,-50%);
+        z-index: -5;
+    }
     &__container{
         position: relative;
         height: 100vh;
@@ -21,6 +32,9 @@ body{
         font-weight: $weight-7;
         &--white{
             color:white;
+        }
+        &:hover{
+            color: white;
         }
     }
     // home bar
@@ -420,6 +434,7 @@ body{
     }
     &__my--info{
         @extend .flex;
+        justify-content: space-between;
         height: 50%;
         position: relative;
     }
@@ -563,6 +578,8 @@ body{
         height: 330px;
         padding: $size-7x;
         box-sizing: border-box;
+        background-color: $secondary-color !important;
+        z-index: 10;
     }
     &__design--progress{
         width: 100%;
@@ -625,6 +642,10 @@ body{
     
 // Responsive
 @media (max-width: 1198px){
+    .resume{
+        width: 100%;
+        border: none;
+    }
     .home{
         height: 100vh;
     }
@@ -654,6 +675,20 @@ body{
 
 }
 @media (max-width: 720px){
+    .resume__my--about{
+        display: flex;
+        flex-direction: column;
+    }
+    .resume__my--profil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume__box{
+        border: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        width: 0px;
+    }
     .home{
         height: 100vh;
     }
