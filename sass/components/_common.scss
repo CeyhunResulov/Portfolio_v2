@@ -99,7 +99,7 @@
     }
 }
 // margin-y
-@for $i from 1 to 11{
+@for $i from 1 to 20{
     .my-#{$i*5}{
         margin: #{$i*5}px 0;
     }
@@ -111,7 +111,7 @@
     }
 }
 // margin-bottom
-@for $i from 1 to 11{
+@for $i from 1 to 20{
     .mb-#{$i*5}{
         margin-bottom: #{$i*5}px;
     }

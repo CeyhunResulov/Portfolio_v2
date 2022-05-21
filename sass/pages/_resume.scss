@@ -6,13 +6,13 @@ body{
     &__cursor{
         border-radius: 50%;
         position: absolute;
-        z-index: 1000;
+        z-index: 0;
         width: 26px;
         height:26px;
         background-color: $font-color-first;
         opacity: 0.4;
         transform: translate(-50%,-50%);
-        z-index: -5;
+        transition: all linear .1s;
     }
     &__container{
         position: relative;
@@ -259,6 +259,7 @@ body{
         transform: rotate(90deg);
         @extend .flex;
         @extend .align-items-center;
+        z-index: 2000;
         &--follow{
             color: $thirdary-color;
             font-size: $size-3x;
@@ -552,6 +553,19 @@ body{
         color: $fourth-color+$fourth-color;
     }
     // experience and education
+    &__edu--width{
+        width: 100%;
+    }
+    &__exp--parent{
+       width: 45%;
+       display: flex;
+       flex-direction: column; 
+    }
+    &__edu--parent{
+       width: 45%;
+       display: flex;
+       flex-direction: column;    
+    }
     &__edu--box{
         align-items: flex-start;
         padding-left: $space-6x;
@@ -568,7 +582,7 @@ body{
         text-align: left;
     }
     &__edu--name{
-        margin-left: 40%;
+        margin-left: 0;
     }
 
     // design
@@ -675,9 +689,61 @@ body{
 
 }
 @media (max-width: 720px){
+    .resume{
+        padding-bottom: 35px;
+    }
+    .resume__edu--parent{
+        width: 100%;
+    }
+    .resume__exp--parent{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .resume__box{
+        z-index: -1;
+    }
+    .resume__parent--service{
+        display: block;
+        margin: 0;
+        height: auto;
+    }
+    .resume__service--box{
+        width: 100%;
+        margin: 0;
+        margin-bottom:50px;
+        background-color: $secondary-color;
+    }
+    .resume__my--desc{
+        margin: 25px 0;
+    }
+    .resume__info--item{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .resume__info--left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume__info--right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume__my--info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .resume__cv--button{
+        margin-top: 15px;
+        position: static;
+    }
     .resume__my--about{
         display: flex;
         flex-direction: column;
+        height: auto;
     }
     .resume__my--profil{
         display: flex;

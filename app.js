@@ -19,11 +19,15 @@ function closeNavbar() {
 }
 
 // cursor
-const cursor = document.querySelector(".home__cursor");
-const body = document.querySelector("body");
-body.addEventListener("mousemove", cursorRun);
-function cursorRun(e) {
-  cursor.style.left = `${e.clientX}px`;
-  cursor.style.top = `${e.clientY}px`;
+
+if (window.innerWidth > 1198) {
+  document.querySelector(".home__cursor").style.display = "block";
+  const cursor = document.querySelector(".home__cursor");
+  document.addEventListener("mousemove", cursorRun);
+  function cursorRun(e) {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY + scrollY}px`;
+  }
+} else {
+  document.querySelector(".home__cursor").style.display = "none";
 }
-setTimeout(cursorRun(e), 5000);

@@ -926,6 +926,42 @@ table {
   margin: 50px 0;
 }
 
+.my-55 {
+  margin: 55px 0;
+}
+
+.my-60 {
+  margin: 60px 0;
+}
+
+.my-65 {
+  margin: 65px 0;
+}
+
+.my-70 {
+  margin: 70px 0;
+}
+
+.my-75 {
+  margin: 75px 0;
+}
+
+.my-80 {
+  margin: 80px 0;
+}
+
+.my-85 {
+  margin: 85px 0;
+}
+
+.my-90 {
+  margin: 90px 0;
+}
+
+.my-95 {
+  margin: 95px 0;
+}
+
 .mt-5 {
   margin-top: 5px;
 }
@@ -1004,6 +1040,42 @@ table {
 
 .mb-50 {
   margin-bottom: 50px;
+}
+
+.mb-55 {
+  margin-bottom: 55px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-65 {
+  margin-bottom: 65px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+
+.mb-75 {
+  margin-bottom: 75px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.mb-85 {
+  margin-bottom: 85px;
+}
+
+.mb-90 {
+  margin-bottom: 90px;
+}
+
+.mb-95 {
+  margin-bottom: 95px;
 }
 
 .ml-5 {
@@ -1859,14 +1931,15 @@ body {
 .home__cursor {
   border-radius: 50%;
   position: absolute;
-  z-index: 1000;
+  z-index: 0;
   width: 26px;
   height: 26px;
   background-color: #4bffa5;
   opacity: 0.4;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: -5;
+  -webkit-transition: all linear .1s;
+  transition: all linear .1s;
 }
 
 .home__container {
@@ -2137,6 +2210,7 @@ body {
   bottom: 150px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+  z-index: 2000;
 }
 
 .home__sosial--follow {
@@ -2472,6 +2546,32 @@ body {
   color: #3c3c3c;
 }
 
+.resume__edu--width {
+  width: 100%;
+}
+
+.resume__exp--parent {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.resume__edu--parent {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .resume__edu--box {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -2495,7 +2595,7 @@ body {
 }
 
 .resume__edu--name {
-  margin-left: 40%;
+  margin-left: 0;
 }
 
 .resume__parent--design {
@@ -2612,6 +2712,78 @@ body {
 }
 
 @media (max-width: 720px) {
+  .resume {
+    padding-bottom: 35px;
+  }
+  .resume__edu--parent {
+    width: 100%;
+  }
+  .resume__exp--parent {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .resume__box {
+    z-index: -1;
+  }
+  .resume__parent--service {
+    display: block;
+    margin: 0;
+    height: auto;
+  }
+  .resume__service--box {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 50px;
+    background-color: #101010;
+  }
+  .resume__my--desc {
+    margin: 25px 0;
+  }
+  .resume__info--item {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .resume__info--left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .resume__info--right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .resume__my--info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .resume__cv--button {
+    margin-top: 15px;
+    position: static;
+  }
   .resume__my--about {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2620,6 +2792,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: auto;
   }
   .resume__my--profil {
     display: -webkit-box;
