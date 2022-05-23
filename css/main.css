@@ -1940,6 +1940,7 @@ body {
           transform: translate(-50%, -50%);
   -webkit-transition: all linear .1s;
   transition: all linear .1s;
+  pointer-events: none;
 }
 
 .home__cursor--hover {
@@ -2358,6 +2359,7 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  z-index: -100;
 }
 
 .resume__nav {
@@ -2378,7 +2380,6 @@ body {
 
 .resume__my--about {
   border: 1px solid rgba(255, 255, 255, 0.07);
-  background: none;
   height: 340px;
   margin: 800px 0 100px 0;
   padding: 35px;
@@ -2437,6 +2438,7 @@ body {
   color: #4bffa5;
   padding: 13px 30px;
   font-size: 16px;
+  z-index: 100;
 }
 
 .resume__parent--service {
@@ -2732,7 +2734,7 @@ body {
     margin-top: 50px;
   }
   .resume__box {
-    z-index: -1;
+    z-index: -100;
   }
   .resume__parent--service {
     display: block;
@@ -2841,16 +2843,6 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-}
-
-.portfolio__hover {
-  -webkit-transition: all ease .5s;
-  transition: all ease .5s;
-}
-
-.portfolio__hover:hover {
-  background-color: #4bffa5;
-  z-index: 1000;
 }
 
 .portfolio__container {
@@ -3075,6 +3067,10 @@ body {
 }
 
 @media (max-width: 1198px) {
+  .portfolio {
+    width: 100%;
+    border: none;
+  }
   .home {
     height: 100vh;
   }
@@ -3104,6 +3100,44 @@ body {
 }
 
 @media (max-width: 720px) {
+  .portfolio__navbar--items {
+    width: 100%;
+  }
+  .portfolio__hover {
+    display: none !important;
+  }
+  .portfolio__parent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .portfolio__common--left {
+    width: 100%;
+    margin: 0;
+    padding: 0 !important;
+    margin-bottom: 40px;
+    position: static;
+    display: block;
+  }
+  .portfolio__common--right {
+    width: 100%;
+    margin: 0;
+    padding: 0 !important;
+    margin-bottom: 40px;
+    position: static;
+    display: block;
+  }
   .home {
     height: 100vh;
   }

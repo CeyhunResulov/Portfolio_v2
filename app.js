@@ -7,6 +7,7 @@ function openNavbar() {
   document.querySelector(".home__bar").style.visibility = "hidden";
   document.querySelector(".home__bar--close").style.display = "block";
   document.querySelector(".home__navpage").style.top = "120px";
+  document.querySelector(".resume").style.display = "none";
 }
 
 function closeNavbar() {
@@ -16,6 +17,7 @@ function closeNavbar() {
   document.querySelector(".home").style.height = "100vh";
   document.querySelector(".home__bar--close").style.display = "none";
   document.querySelector(".home__bar").style.visibility = "visible";
+  document.querySelector(".resume").style.display = "flex";
 }
 
 // cursor
@@ -32,7 +34,6 @@ if (window.innerWidth > 1198) {
 }
 
 const links = document.querySelectorAll("a");
-console.log(links);
 links.forEach((li) => {
   li.addEventListener("mouseover", toEnlargeCursor);
   li.addEventListener("mouseleave", toShrinkCursor);

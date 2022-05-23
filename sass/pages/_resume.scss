@@ -13,6 +13,7 @@ body{
         opacity: 0.6;
         transform: translate(-50%,-50%);
         transition: all linear .1s;
+        pointer-events: none;
         &--hover{
             transform: scale(3);
             transform-origin: 75% 75%;
@@ -388,6 +389,7 @@ body{
         height: 100%;
         left: 50%;
         transform: translateX(-50%);
+        z-index: -100;
     }
     &__nav{
         position: absolute;
@@ -404,13 +406,13 @@ body{
     }
     &__my--about{
         border: 1px solid rgba(255,255,255,0.07);
-        background: none;
         height: $size-17x*4;
         margin: $space-20x*8 0 $space-20x 0;
         padding: $space-7x;
         box-sizing: border-box;
         background-color: $secondary-color;
         z-index: -2;
+        
     }
     &__my--profil{
         @extend .flex;
@@ -460,6 +462,7 @@ body{
         color: $font-color-first;
         padding: $space-3x - 2 $space-6x;
         font-size: $size-4x - 4;
+        z-index: 100;
     }
 
     // service
@@ -705,7 +708,7 @@ body{
         margin-top: 50px;
     }
     .resume__box{
-        z-index: -1;
+        z-index: -100;
     }
     .resume__parent--service{
         display: block;
