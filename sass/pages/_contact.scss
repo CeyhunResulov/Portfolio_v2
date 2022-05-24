@@ -6,6 +6,9 @@
     @extend .flex;
     flex-wrap: wrap;
     position: relative;
+    &__box{
+        z-index: -1000;
+    }
     &__hover{
         transition: all ease .5s;
         &:hover{
@@ -94,7 +97,6 @@
         margin-left: $space-7x;
     }
     &__parent{
-        border: 1px solid blue;
         margin-top: 100vh;
         padding: $space-15x*2 0;
         box-sizing: border-box;
@@ -245,3 +247,123 @@
         }
     }
 }
+
+
+
+@media (max-width: 1198px){
+    .contacts{
+       width: 100%;
+       border: none;
+       padding-bottom: 75px;
+
+    }
+    .contacts__parent{
+        height: 1500px;
+    }
+    .contacts__parent--form{
+        bottom: 175px;
+    }
+    .contacts__parent--sdtitle{
+        bottom: 620px;
+    }
+    
+@media (max-width: 720px){
+    .contacts{
+        padding-bottom: 0;
+    }
+    .contacts__parent--sdtitle{
+        margin: 100px 0 0 30px;
+    }
+    .contacts__parent{
+        height:auto;
+        display: block;
+        padding: 150px 0 0;
+    }
+    .contacts__parent *{
+        position: static;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .contacts__parent * *{
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .contacts__parent--input{
+        width: 100% !important;
+        font-size: 16px;
+        color: white;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+        margin-bottom: $space-5x;
+        padding: $space-3x 0;
+        box-sizing: border-box;
+    }
+    .contacts__parent--submit{
+        padding: $space-2x $space-5x;
+        font-size: 16px;
+        color: $font-color-first;
+        background: none;
+        border: 2px solid $font-color-first;
+        
+        
+    }
+    .contacts__parent--message{
+        height: 110px;
+        width: 100%;
+        background: none;
+        color: white;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+        resize: none;
+        font-size: 16px;
+        box-sizing: border-box;
+        margin-bottom: $space-5x;
+        padding: $space-3x 0;
+
+    }
+    .portfolio__contact--mobile *{
+        width: auto;
+    }
+    .portfolio__contact--mobile{
+        margin-top: 60px;
+    }
+    .contacts__box{
+        width: 0;
+        border-left: none;
+    }
+    .blog__search--form{
+        width: 100%;
+    }
+    .blog{
+        border: none;
+    }
+    .blog__box{
+        width: 0;
+        border-left: none;
+    }
+    .blog__parent{
+        display: block;
+        padding: 150px 0 0;
+    }
+    .blog__parent--left{
+        width: 100%;
+        height: auto;
+    }
+    .blog__parent--right{
+        width: 100%;
+        height: auto;
+    }
+    .blog__parent--img{
+        width: 100%;
+        height: 230px;
+    }
+}
+  
+    
+
+
+}
+
