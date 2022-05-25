@@ -33,7 +33,12 @@ if (window.innerWidth > 1198) {
   document.querySelector(".home__cursor").style.display = "none";
 }
 
+const navbar = document.querySelectorAll(".home__item");
 const links = document.querySelectorAll("a");
+navbar.forEach((li) => {
+  li.addEventListener("mouseover", toEnlargeCursor);
+  li.addEventListener("mouseleave", toShrinkCursor);
+});
 links.forEach((li) => {
   li.addEventListener("mouseover", toEnlargeCursor);
   li.addEventListener("mouseleave", toShrinkCursor);

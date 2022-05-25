@@ -50,7 +50,7 @@ table {
   border-spacing: 0;
 }
 
-.flex, .home__head, .home__bar, .home__menu, .home__item, .home__dropdown--item, .home__dropdown--link, .home__sosial, .home__footer, .home__navpage .home__dropdown--item, .home__navpage .home__dropdown--link, .resume, .resume__my--profil, .resume__my--box, .resume__my--info, .portfolio, .blog, .contacts {
+.flex, .home__head, .home__bar, .home__menu, .home__menu__item, .home__dropdown--item, .home__dropdown--link, .home__sosial, .home__footer, .home__navpage .home__dropdown--item, .home__navpage .home__dropdown--link, .home__item, .resume, .resume__my--profil, .resume__my--box, .resume__my--info, .portfolio, .blog, .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +68,7 @@ table {
           justify-content: center;
 }
 
-.align-items-center, .home__head, .home__bar, .home__item, .home__dropdown--item, .home__dropdown--link, .home__sosial, .home__footer {
+.align-items-center, .home__head, .home__bar, .home__menu__item, .home__dropdown--item, .home__dropdown--link, .home__sosial, .home__footer, .home__item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1501,13 +1501,13 @@ table {
   width: 35%;
 }
 
-.home__item {
+.home__menu__item {
   overflow: hidden;
   position: relative;
   height: inherit;
 }
 
-.home__item--link {
+.home__menu--link {
   color: #bbbbbb;
   font-size: 15px;
   font-weight: 800;
@@ -1517,19 +1517,19 @@ table {
   transition: all ease .4s;
 }
 
-.home__item--link:hover {
+.home__menu--link:hover {
   color: white;
 }
 
-.home__item--icon {
+.home__menu--icon {
   color: #bbbbbb;
 }
 
-.home__item--active {
+.home__menu--active {
   color: white !important;
 }
 
-.home__item--hover {
+.home__menu--hover {
   position: absolute;
   right: 0px;
   opacity: 0;

@@ -111,18 +111,18 @@
         display: none;
     }
     // home menu 
-    &__menu{
+    &__menu{  
         height: inherit;
         width: 35%;
         @extend .flex;
         @extend .justify-content-between;
-    }
     &__item{
         overflow: hidden;
         position: relative;
         height: inherit;
         @extend .flex;
-        @extend .align-items-center; 
+        @extend .align-items-center;
+        }
         &--link{
             color: $main-color;
             font-size: $size-3x;
