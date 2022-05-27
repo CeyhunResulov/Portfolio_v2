@@ -6,7 +6,7 @@ body{
     &__cursor{
         border-radius: 50%;
         position: absolute;
-        z-index: -1;
+        z-index: 11111;
         width: 26px;
         height:26px;
         background-color: $font-color-first;
@@ -410,13 +410,14 @@ body{
         margin: $space-20x*8 0 $space-20x 0;
         padding: $space-7x;
         box-sizing: border-box;
-        background-color: $secondary-color;
-        z-index: -2;
+        background-color: $secondary-color; 
+        z-index: 1;
         
     }
     &__my--profil{
         @extend .flex;
         @extend .justify-content-between;
+        flex-wrap: wrap;
         margin: 0 auto;
         
     }
@@ -456,19 +457,17 @@ body{
     }
     &__cv--button{
         border: 2px solid $font-color-first;
-        position: absolute;
-        left: 0;
-        bottom: -$space-15x;
+        position: relative;
+        margin: 40px 0 0 150px;
         color: $font-color-first;
         padding: $space-3x - 2 $space-6x;
         font-size: $size-4x - 4;
-        z-index: 100;
+        z-index: 10000000;
     }
 
     // service
     &__parent--service{
         margin-bottom: $space-15x;
-        z-index: -2;
     }
 
     &__service{

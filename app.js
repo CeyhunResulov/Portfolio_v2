@@ -50,3 +50,43 @@ function toEnlargeCursor(e) {
 function toShrinkCursor(e) {
   cursor.classList.remove("home__cursor--hover");
 }
+
+// buttons hover
+
+const buttons = document.querySelectorAll(".button");
+const buttonsHover = document.querySelectorAll(".button__hover");
+console.log(buttons, buttonsHover);
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseenter", buttonsHoverShow);
+
+  function buttonsHoverShow(e) {
+    const offsetX = e.offsetX;
+    const offsetY = e.offsetY;
+    button.firstElementChild.style.top = offsetY + "px";
+    button.firstElementChild.style.left = offsetX + "px";
+
+    document.querySelector(".home__cursor").style.display = "none";
+
+    button.firstElementChild.style.transition = "all ease .1s";
+    button.firstElementChild.addEventListener("transitionend", () => {
+      button.firstElementChild.style.transition = "all ease .7s";
+      button.firstElementChild.style.transform = "scale(600,600)";
+    });
+  }
+
+  button.addEventListener("mouseleave", buttonsHoverStop);
+
+  function buttonsHoverStop(e) {
+    const offsetX = e.offsetX;
+    const offsetY = e.offsetY;
+    button.firstElementChild.style.top = offsetY + "px";
+    button.firstElementChild.style.left = offsetX + "px";
+    document.querySelector(".home__cursor").style.display = "block";
+    button.firstElementChild.style.transition = "all ease .1s";
+    button.firstElementChild.addEventListener("transitionend", () => {
+      button.firstElementChild.style.transition = "all ease .7s";
+      button.firstElementChild.style.transform = "scale(1)";
+    });
+  }
+});
