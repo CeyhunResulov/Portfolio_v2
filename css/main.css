@@ -1406,6 +1406,9 @@ table {
 
 .home {
   height: 100vh;
+  opacity: 0;
+  -webkit-transition: all ease 2s;
+  transition: all ease 2s;
 }
 
 .home__container {
@@ -1484,6 +1487,8 @@ table {
 
 .home__head {
   height: 40px;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
 }
 
 .home__reset {
@@ -1547,7 +1552,7 @@ table {
 }
 
 .home__menu {
-  height: inherit;
+  height: 40px !important;
   width: 35%;
 }
 
@@ -2000,6 +2005,7 @@ body {
           transform-origin: 75% 75%;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
+  opacity: 0.3;
 }
 
 .home__container {

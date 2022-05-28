@@ -7,7 +7,7 @@ function openNavbar() {
   document.querySelector(".home__bar").style.visibility = "hidden";
   document.querySelector(".home__bar--close").style.display = "block";
   document.querySelector(".home__navpage").style.top = "120px";
-  document.querySelector(".resume").style.display = "none";
+  document.querySelector(".all__page").style.display = "none";
 }
 
 function closeNavbar() {
@@ -17,7 +17,7 @@ function closeNavbar() {
   document.querySelector(".home").style.height = "100vh";
   document.querySelector(".home__bar--close").style.display = "none";
   document.querySelector(".home__bar").style.visibility = "visible";
-  document.querySelector(".resume").style.display = "flex";
+  document.querySelector(".all__page").style.display = "flex";
 }
 
 // cursor
@@ -90,3 +90,29 @@ buttons.forEach((button) => {
     });
   }
 });
+
+// when scroll window head bar
+
+const headNavbar = document.querySelector(".home__head");
+
+window.addEventListener("scroll", navbarSroll);
+
+function navbarSroll() {
+  if (window.scrollY > 100) {
+    headNavbar.style.top = 0 + "px";
+    headNavbar.style.height = 100 + "px";
+    headNavbar.style.backgroundColor = "rgb(16, 16, 16)";
+  } else {
+    headNavbar.style.top = 50 + "px";
+    headNavbar.style.height = 40 + "px";
+    headNavbar.style.background = "none";
+  }
+}
+
+// ...............
+
+document.addEventListener("DOMContentLoaded", test);
+
+function test() {
+  document.querySelector(".home").style.opacity = 1;
+}

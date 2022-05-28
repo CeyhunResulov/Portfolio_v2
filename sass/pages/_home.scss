@@ -1,5 +1,7 @@
 .home{
     height: 100vh;
+    opacity: 0;
+    transition: all ease 2s;
     &__container{
         box-sizing: border-box;
         position: relative;
@@ -59,6 +61,7 @@
         @extend .flex;
         @extend .justify-content-between;
         @extend .align-items-center;
+        transition: all ease .5s;
     }
     &__reset{
         color: $main-color;
@@ -112,7 +115,7 @@
     }
     // home menu 
     &__menu{  
-        height: inherit;
+        height: 40px !important;
         width: 35%;
         @extend .flex;
         @extend .justify-content-between;
