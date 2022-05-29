@@ -387,10 +387,10 @@ body{
         border: 1px solid rgba(255,255,255,0.07);
         background: none;
         position: absolute;
-        height: 100%;
         left: 50%;
         transform: translateX(-50%);
         z-index: -100;
+        transition: all linear 2s;
     }
     &__nav{
         position: absolute;
@@ -450,7 +450,10 @@ body{
     }
     &__info--item{
         color: $thirdary-color;
-        margin: $space-2x $space-15x 0 0;
+        margin-top: $space-2x;
+    }
+    &__info--right{
+        margin-right: 30px;
     }
     &__info--title{
         color: $font-color-first;
@@ -668,6 +671,16 @@ body{
         width: 100%;
         border: none;
     }
+    .resume__contact--mobile{
+        position: static !important;
+        margin-bottom: 50px;
+    }
+    .resume__sosial{
+        display: none;
+    }
+    .resume__info--right{
+        margin-right: 80px;
+    }
     .home{
         height: 100vh;
     }
@@ -699,6 +712,12 @@ body{
 @media (max-width: 720px){
     .resume{
         padding-bottom: 35px;
+    }
+    .resume__info--right{
+        margin-right: 0px;
+    }
+    .resume__cv--button{
+        margin: 15px 0 !important;
     }
     .resume__edu--parent{
         width: 100%;
@@ -743,10 +762,6 @@ body{
         flex-direction: column;
         align-items: center;
         height: auto;
-    }
-    .resume__cv--button{
-        margin-top: 15px;
-        position: static;
     }
     .resume__my--about{
         display: flex;

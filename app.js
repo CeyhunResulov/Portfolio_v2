@@ -55,7 +55,6 @@ function toShrinkCursor(e) {
 
 const buttons = document.querySelectorAll(".button");
 const buttonsHover = document.querySelectorAll(".button__hover");
-console.log(buttons, buttonsHover);
 
 buttons.forEach((button) => {
   button.addEventListener("mouseenter", buttonsHoverShow);
@@ -109,10 +108,15 @@ function navbarSroll() {
   }
 }
 
-// ...............
+// open website
+
+const centerBox = document.querySelector(".center__box");
+centerBox.style.height = 0 + "%";
+centerBox.style.borderBottom = "none";
 
 document.addEventListener("DOMContentLoaded", test);
 
 function test() {
   document.querySelector(".home").style.opacity = 1;
+  centerBox.style.height = 100 + "%";
 }

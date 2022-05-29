@@ -55,7 +55,6 @@ const projectsBox = document.querySelector(".home__container--pro");
 const reset = document.querySelector(".home__container--pro i");
 const portrait = document.querySelector(".home__container--portrait");
 const pro = document.querySelector(".home__container--pro");
-const footer = document.querySelector(".home__desc");
 projects.addEventListener("click", showProjects);
 reset.addEventListener("click", hiddenProjects);
 
@@ -64,7 +63,6 @@ function showProjects(e) {
     projectsBox.style.width = 500 + "px";
   } else {
     pro.style.animation = "project 1s ease forwards";
-    footer.style.marginTop = "200px";
   }
 }
 
