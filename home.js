@@ -63,6 +63,7 @@ function showProjects(e) {
     projectsBox.style.width = 500 + "px";
   } else {
     pro.style.animation = "project 1s ease forwards";
+    document.querySelector(".home__info").style.marginTop = 430 + "px";
   }
 }
 
@@ -70,5 +71,6 @@ function hiddenProjects(e) {
   projectsBox.style.width = "0";
   if (window.innerWidth < 720) {
     pro.style.animation = "backpro 1s ease forwards";
+    document.querySelector(".home__info").style.marginTop = 250 + "px";
   }
 }

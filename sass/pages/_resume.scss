@@ -236,28 +236,6 @@ body{
         right: $space-2x;
         top: -$space-x;
     }
-    // home desc
-    &__info{
-        position: relative;
-        margin-top: $space-19x*4;
-        width: 100%;
-        height: $size-12x;
-        box-sizing: border-box;
-        &--desc{
-            color: white;
-            position: absolute;
-            left: 50%;
-            right: 12em;
-            font-size: $size-4x;
-            font-weight: $weight-1;
-            line-height: $size-6x;
-        }
-        &--name{
-            font-weight: $weight-6;
-            color: green;
-        }
-
-    }
     // home sosial
     &__sosial{
         position: absolute;
@@ -266,7 +244,6 @@ body{
         transform: rotate(90deg);
         @extend .flex;
         @extend .align-items-center;
-        z-index: 2000;
         &--follow{
             color: $thirdary-color;
             font-size: $size-3x;
@@ -428,7 +405,7 @@ body{
         
     }
     &__my--img{
-        width: 160px;
+        width: 100%;
         height: 100%;
     
     }
@@ -529,6 +506,7 @@ body{
     &__pricing--hours{
         border: 1px solid white;
         display: flex;
+        padding: 5px 8px;
     }
     &__pricing--num{
         color: rgb(238, 238, 238);
@@ -767,6 +745,7 @@ body{
         display: flex;
         flex-direction: column;
         height: auto;
+        padding:$space-7x 0;
     }
     .resume__my--profil{
         display: flex;
@@ -790,8 +769,13 @@ body{
         width: 80%;
         font-size: $size-3x;
     }
-    
-
+    .resume__my--foto{
+        width: 160px;
+        height: 160px;
+    }
+    .resume__service--name{
+        margin-left: 0 !important;
+    }
 }
 
 

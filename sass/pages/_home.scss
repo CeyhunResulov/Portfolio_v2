@@ -275,7 +275,7 @@
     // home desc
     &__info{
         position: relative;
-        margin-top: $space-19x*4;
+        margin-top: 300px;
         width: 100%;
         height: $size-12x;
         box-sizing: border-box;
@@ -292,7 +292,6 @@
             font-weight: $weight-6;
             color: green;
         }
-
     }
     // home sosial
     &__sosial{
@@ -358,7 +357,6 @@
         visibility: hidden;
         opacity: 0;
         width: 100%;
-        padding-bottom: 100px;
         top: 0;
         background-color: $secondary-color;
         transition: all ease 1s;
@@ -386,14 +384,14 @@
 @keyframes project{
     0%{height: 0;
     width: 0;}
-    50%{height: 270px;
+    50%{height: 230px;
     width: 0;}
-    100%{height: 270px; width: 300px;}
+    100%{height: 230px; width: 300px;}
 }
 
 @keyframes backpro{
-    0%{height: 270px; width: 300px;}
-    50%{height: 270px; width: 0;}
+    0%{height: 230px; width: 300px;}
+    50%{height: 230px; width: 0;}
     100%{height: 0; width: 0;}
 }
 
@@ -411,6 +409,9 @@
     
 // Responsive
 @media (max-width: 1198px){
+    .home__info{
+        margin-top: 380px;
+    }
     .home{
         height: 100vh;
     }
@@ -445,7 +446,29 @@
 }
 @media (max-width: 720px){
     .home{
-        height: 100vh;
+        height: 750px !important;
+    }
+    .home__info{
+        transition: all ease 1s;
+        margin-top: 250px;
+    }
+    .home__container{
+        padding: 0 !important;
+    }
+    .home__head{
+        background-color: $secondary-color !important;
+        padding: 15px 0;
+    }
+    .home__reset{
+        font-size: 20px;
+    }
+    .home__bar{
+        width: 25px !important;
+        height: 15px !important;
+    }
+    .home__box{
+        width: 0;
+        border-left: 0;
     }
     .home__about{
         font-size: $size-5x;
@@ -453,8 +476,7 @@
     }
     .home__info--desc{
         margin: 0;
-        padding-top: 50px;
-        width: 80%;
+        width: 100% !important;
         font-size: $size-3x;
     }
     .home__container--project{
@@ -468,8 +490,8 @@
         height: 0;
     }
     .home__container--portrait{
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         box-shadow: none;
         transform: rotate(90deg);
         transition: all ease 1s;
@@ -478,7 +500,9 @@
     .home__container--image{
         transform: rotate(-90deg);
     }
-    
+    .only__home--navpage{
+        top: 80px !important;
+    }
 
 }
 

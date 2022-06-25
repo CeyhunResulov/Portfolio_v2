@@ -75,6 +75,10 @@ table {
   color: black;
 }
 
+.font-color {
+  color: #bbb;
+}
+
 .flex, .home__head, .home__bar, .home__menu, .home__menu__item, .home__dropdown--item, .home__dropdown--link, .home__sosial, .home__footer, .home__navpage .home__dropdown--item, .home__navpage .home__dropdown--link, .home__item, .resume, .resume__my--profil, .resume__my--box, .resume__my--info, .portfolio, .blog, .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,6 +121,14 @@ table {
 
 .bcg-none {
   background: none !important;
+}
+
+.margin__1 {
+  margin-top: 250px !important;
+}
+
+.margin__2 {
+  margin-top: 430px !important;
 }
 
 .size-1 {
@@ -1728,7 +1740,7 @@ table {
 
 .home__info {
   position: relative;
-  margin-top: 380px;
+  margin-top: 300px;
   width: 100%;
   height: 60px;
   -webkit-box-sizing: border-box;
@@ -1825,7 +1837,6 @@ table {
   visibility: hidden;
   opacity: 0;
   width: 100%;
-  padding-bottom: 100px;
   top: 0;
   background-color: #101010;
   -webkit-transition: all ease 1s;
@@ -1852,11 +1863,11 @@ table {
     width: 0;
   }
   50% {
-    height: 270px;
+    height: 230px;
     width: 0;
   }
   100% {
-    height: 270px;
+    height: 230px;
     width: 300px;
   }
 }
@@ -1867,22 +1878,22 @@ table {
     width: 0;
   }
   50% {
-    height: 270px;
+    height: 230px;
     width: 0;
   }
   100% {
-    height: 270px;
+    height: 230px;
     width: 300px;
   }
 }
 
 @-webkit-keyframes backpro {
   0% {
-    height: 270px;
+    height: 230px;
     width: 300px;
   }
   50% {
-    height: 270px;
+    height: 230px;
     width: 0;
   }
   100% {
@@ -1893,11 +1904,11 @@ table {
 
 @keyframes backpro {
   0% {
-    height: 270px;
+    height: 230px;
     width: 300px;
   }
   50% {
-    height: 270px;
+    height: 230px;
     width: 0;
   }
   100% {
@@ -1916,6 +1927,9 @@ table {
 }
 
 @media (max-width: 1198px) {
+  .home__info {
+    margin-top: 380px;
+  }
   .home {
     height: 100vh;
   }
@@ -1949,15 +1963,37 @@ table {
 
 @media (max-width: 720px) {
   .home {
-    height: 100vh;
+    height: 750px !important;
+  }
+  .home__info {
+    -webkit-transition: all ease 1s;
+    transition: all ease 1s;
+    margin-top: 250px;
+  }
+  .home__container {
+    padding: 0 !important;
+  }
+  .home__head {
+    background-color: #101010 !important;
+    padding: 15px 0;
+  }
+  .home__reset {
+    font-size: 20px;
+  }
+  .home__bar {
+    width: 25px !important;
+    height: 15px !important;
+  }
+  .home__box {
+    width: 0;
+    border-left: 0;
   }
   .home__about {
     font-size: 25px;
   }
   .home__info--desc {
     margin: 0;
-    padding-top: 50px;
-    width: 80%;
+    width: 100% !important;
     font-size: 15px;
   }
   .home__container--project {
@@ -1972,8 +2008,8 @@ table {
     height: 0;
   }
   .home__container--portrait {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     -webkit-box-shadow: none;
             box-shadow: none;
     -webkit-transform: rotate(90deg);
@@ -1984,6 +2020,9 @@ table {
   .home__container--image {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
+  }
+  .only__home--navpage {
+    top: 80px !important;
   }
 }
 
@@ -2258,37 +2297,12 @@ body {
   top: -5px;
 }
 
-.home__info {
-  position: relative;
-  margin-top: 380px;
-  width: 100%;
-  height: 60px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.home__info--desc {
-  color: white;
-  position: absolute;
-  left: 50%;
-  right: 12em;
-  font-size: 20px;
-  font-weight: 100;
-  line-height: 30px;
-}
-
-.home__info--name {
-  font-weight: 600;
-  color: green;
-}
-
 .home__sosial {
   position: absolute;
   right: -120px;
   bottom: 150px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  z-index: 2000;
 }
 
 .home__sosial--follow {
@@ -2470,7 +2484,7 @@ body {
 }
 
 .resume__my--img {
-  width: 160px;
+  width: 100%;
   height: 100%;
 }
 
@@ -2588,6 +2602,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 5px 8px;
 }
 
 .resume__pricing--num {
@@ -2889,6 +2904,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     height: auto;
+    padding: 35px 0;
   }
   .resume__my--profil {
     display: -webkit-box;
@@ -2917,6 +2933,13 @@ body {
     margin: 0;
     width: 80%;
     font-size: 15px;
+  }
+  .resume__my--foto {
+    width: 160px;
+    height: 160px;
+  }
+  .resume__service--name {
+    margin-left: 0 !important;
   }
 }
 
@@ -2977,6 +3000,7 @@ body {
           transform: translateX(-50%);
   -webkit-transition: all linear 4s;
   transition: all linear 4s;
+  z-index: -10;
 }
 
 .portfolio__nav {

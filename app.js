@@ -1,6 +1,8 @@
 // navbar open and close
 function openNavbar() {
   document.querySelector(".home__navpage").style.visibility = "visible";
+  document.querySelector(".home__navpage").style.height = "auto";
+  document.querySelector(".home__navpage").style.paddingBottom = 100 + "px";
   document.querySelector(".home__navpage").style.zIndex = 100;
   document.querySelector(".home__navpage").style.opacity = "1";
   document.querySelector(".home").style.height = "850px";
@@ -12,6 +14,8 @@ function openNavbar() {
 
 function closeNavbar() {
   document.querySelector(".home__navpage").style.visibility = "hidden";
+  document.querySelector(".home__navpage").style.height = 0 + "px";
+  document.querySelector(".home__navpage").style.paddingBottom = 0 + "px";
   document.querySelector(".home__navpage").style.opacity = "0";
   document.querySelector(".home__navpage").style.top = "0";
   document.querySelector(".home").style.height = "100vh";
