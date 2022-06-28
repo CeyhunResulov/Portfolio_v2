@@ -44,6 +44,7 @@
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             box-shadow: -10px -10px 20px white;
+            overflow: hidden;
             & i{
                 color: white;
                 font-size: 30px;
@@ -54,9 +55,12 @@
             height: 100%;
             padding: 20px 0;
             box-sizing: border-box;
-            li{
-                color: white;
-            }
+            font-size: 20px;
+            line-height: 35px;
+            color: white;
+        }
+        &--github{
+            color: green;
         }
         &--portrait{
             border: 3px solid white;
@@ -497,6 +501,11 @@
     .home__container--pro{
         background-color: $secondary-color;
         height: 0;
+    }
+    .home__container--about{
+        transform: rotate(-90deg);
+        font-size: 15px;
+        width: 70%;
     }
     .home__container--portrait{
         width: 150px;
